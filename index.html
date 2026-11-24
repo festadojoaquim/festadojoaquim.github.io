@@ -2,8 +2,8 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Joaquim faz 2 aninhos! 🐮</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Joaquim faz 2 aninhos!</title>
 <meta name="description" content="Tem festa na fazendinha! Sábado, 12 de dezembro, às 19h.">
 <meta name="theme-color" content="#CFE6F2">
 <meta property="og:type" content="website">
@@ -19,319 +19,271 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Pacifico&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --sky:#CFE6F2; --sky2:#EAF5FA; --sage:#C9DBB2; --sage-d:#9DBA86;
-    --grass:#7FA65A; --grass-d:#5E8A3F; --wood:#B07A4B; --wood-d:#7E5230; --wood-l:#D2A273;
-    --cream:#FBF6EA; --blue:#8DB6D9; --blue-d:#4E7CA8; --ink:#4A3324; --pink:#F6B8B8;
-  }
-  *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
-  html,body{background:linear-gradient(#bfdcec,#e6f1e0);min-height:100%}
-  body{font-family:"Baloo 2",system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);overflow-x:hidden}
-  body.locked{overflow:hidden;height:100vh}
-  .app{max-width:480px;margin:0 auto;background:linear-gradient(180deg,var(--sky) 0%,var(--sky2) 38%,var(--sage) 62%,#dfe9cf 100%);min-height:100vh;position:relative;overflow:hidden;box-shadow:0 0 40px rgba(0,0,0,.12)}
-  button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit}
+/*
+  VOICE: livro infantil colorido, macio e alegre — o mesmo carinho do topo do bolo.
+  IDEA: o convite é o topo do bolo ganhando vida; abre como as portas de um celeiro.
+  PICTURE: cena grande (moinho, casinha, árvore, Joaquim cowboy, "2" xadrez) sobre o tampo do bolo.
+  COLOUR/TYPE: céu azul-claro, verde-sálvia, madeira e xadrez azul; Pacifico no nome, Baloo 2 no resto.
+  LAYOUT: uma coluna de celular; cena + placa do nome na 1ª tela; bichinhos com placas levam aos detalhes.
+*/
+:root{
+  --sky:#CFE6F2; --paper:#F8F2E6; --sage:#CFE0B8; --sage2:#B9D29C; --sage-d:#8FB070; --grass:#86AD62; --grass-d:#6A9150;
+  --wood:#B98656; --wood-d:#7A5236; --wood-l:#D9B285; --cream:#FBF6EA; --blue:#8DB6D9; --blue-d:#4E7CA8;
+  --ink:#4E3828; --soft:#7a6656; --barn:#C0634A; --barn-d:#A44F39; --ok:#5E9445; --ok-d:#467534;
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;min-width:0}
+html{background:#E9EFE3}
+body{font-family:"Baloo 2",system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);overflow-x:hidden;background:#E9EFE3}
+body.locked{overflow:hidden;height:100vh}
+button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit}
+.ic{width:1.15em;height:1.15em;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;vertical-align:-.18em}
+.grain{position:absolute;inset:0;pointer-events:none;opacity:.5;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .42  0 0 0 0 .33  0 0 0 0 .24  0 0 0 .35 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
 
-  /* ---------- PORTEIRA ---------- */
-  .gate{position:fixed;inset:0;z-index:50;display:flex;perspective:1400px;cursor:pointer;background:linear-gradient(#bfdcec 0 55%,#8fb86a 55%)}
-  .gate .door{flex:1;position:relative;transition:transform 1.4s cubic-bezier(.6,.05,.3,1);
-    background:repeating-linear-gradient(90deg,var(--wood) 0 34px,var(--wood-d) 34px 37px,#bb8657 37px 71px,var(--wood-d) 71px 74px);
-    box-shadow:inset 0 0 0 7px var(--wood-d);}
-  .gate .door.l{transform-origin:left center}
-  .gate .door.r{transform-origin:right center}
-  .gate .door::before,.gate .door::after{content:"";position:absolute;left:4%;right:4%;height:26px;background:#c48d5c;border:3px solid var(--wood-d);border-radius:6px}
-  .gate .door::before{top:16%}.gate .door::after{bottom:16%}
-  .gate .brace{position:absolute;left:50%;top:50%;width:150%;height:24px;background:#c48d5c;border:3px solid var(--wood-d);border-radius:6px;transform:translate(-50%,-50%) rotate(58deg)}
-  .gate .door.r .brace{transform:translate(-50%,-50%) rotate(-58deg)}
-  .gate.open .door.l{transform:rotateY(-105deg)}
-  .gate.open .door.r{transform:rotateY(105deg)}
-  .gate.gone{opacity:0;pointer-events:none;transition:opacity .5s .9s}
-  .sign{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:3;text-align:center;
-    background:var(--cream);border:6px solid var(--wood-d);border-radius:18px;padding:18px 26px 14px;width:min(80vw,320px);
-    box-shadow:0 10px 0 rgba(0,0,0,.15);transition:opacity .4s}
-  .sign::before,.sign::after{content:"";position:absolute;top:-60px;width:4px;height:60px;background:#8a6a4a}
-  .sign::before{left:30%}.sign::after{right:30%}
-  .gate.open .sign{opacity:0}
-  .sign small{display:block;font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.8rem;color:var(--wood-d)}
-  .sign .nm{font-family:Pacifico,cursive;font-size:2.6rem;line-height:1.3;color:var(--wood-d)}
-  .sign .tap{margin-top:6px;display:inline-block;background:var(--grass);color:#fff;font-weight:800;border-radius:999px;padding:6px 18px;animation:pulse 1.4s infinite}
-  @keyframes pulse{50%{transform:scale(1.08)}}
+.app{position:relative;max-width:480px;margin:0 auto;min-height:100vh;overflow:hidden;
+  background:linear-gradient(180deg,#CFE6F2 0%,#EAF5FA 42%,#DCEACB 64%,#C9DBB2 100%);box-shadow:0 0 50px rgba(60,40,20,.12)}
 
-  /* ---------- HERO ---------- */
-  .hero{position:relative;padding:18px 20px 0;text-align:center}
-  .cloud{position:absolute;background:#fff;border-radius:50px;opacity:.9;animation:drift linear infinite}
-  .cloud::before,.cloud::after{content:"";position:absolute;background:#fff;border-radius:50%}
-  .cloud::before{width:50%;height:160%;left:15%;top:-70%}
-  .cloud::after{width:38%;height:130%;right:12%;top:-50%}
-  @keyframes drift{from{transform:translateX(-140px)}to{transform:translateX(620px)}}
-  .sun{position:absolute;right:26px;top:22px;width:58px;height:58px;border-radius:50%;background:#FFE08A;box-shadow:0 0 0 10px rgba(255,224,138,.35),0 0 0 22px rgba(255,224,138,.15)}
+/* ---------- CELEIRO DE ABERTURA ---------- */
+.gate{position:fixed;inset:0;z-index:50;background:#BFDDEE;cursor:pointer;transition:opacity .7s 1.5s}
+.gate-in{position:absolute;top:0;bottom:0;left:50%;width:min(100vw,480px);transform:translateX(-50%);overflow:hidden}
+.stage{position:absolute;left:50%;top:50%;width:max(100%,calc(100vh * 400 / 760));aspect-ratio:400/760;transform:translate(-50%,-50%);transform-origin:50% 66.4%;
+  transition:transform 1.5s cubic-bezier(.65,0,.35,1) .75s}
+.gate-art{position:absolute;inset:0;width:100%;height:100%}
+.gate .blades,.gate .cloud{animation:float 9s ease-in-out infinite}
+.lamp{animation:lamp 1.6s ease-in-out infinite}
+.idle{transform-box:fill-box;transform-origin:50% 100%}
+.peek{animation:peek 3.6s ease-in-out infinite}
+@keyframes peek{0%,55%,100%{transform:none}65%,85%{transform:translate(-4px,-7px) rotate(-5deg)}}
+.nod{animation:nod 2.8s ease-in-out infinite}
+@keyframes nod{0%,50%,100%{transform:none}60%{transform:rotate(5deg)}70%{transform:rotate(-3deg)}80%{transform:rotate(4deg)}}
+.hopx{animation:hopx 2.2s ease-in-out infinite}
+@keyframes hopx{0%,60%,100%{transform:none}68%{transform:translateY(-9px) scale(.97,1.04)}76%{transform:none}82%{transform:translateY(-5px)}88%{transform:none}}
+.wag{animation:wag 2.6s ease-in-out infinite;animation-delay:-1.2s}
+@keyframes wag{0%,55%,100%{transform:none}62%{transform:rotate(-4deg)}70%{transform:rotate(4deg)}78%{transform:rotate(-3deg)}86%{transform:rotate(2deg)}}
+@keyframes lamp{50%{opacity:.75}}
+.hole{position:absolute;left:29.5%;top:51.05%;width:41%;height:29.95%;display:flex;perspective:900px;background:#F2C46E}
+.hole .glow{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 60%,#FFFBEA 0%,#FFE7A3 45%,#F2C46E 100%)}
+.hole .door{position:relative;flex:1;outline:2px solid #3b2a20;outline-offset:-2px;transition:transform 1.2s cubic-bezier(.55,.05,.3,1);border:4px solid var(--cream);
+  background:
+    linear-gradient(to top right,transparent calc(50% - 4px),var(--cream) calc(50% - 4px),var(--cream) calc(50% + 4px),transparent calc(50% + 4px)),
+    linear-gradient(to top left,transparent calc(50% - 4px),var(--cream) calc(50% - 4px),var(--cream) calc(50% + 4px),transparent calc(50% + 4px)),
+    repeating-linear-gradient(90deg,#B5573F 0 18px,#9E4733 18px 20px)}
+.hole .door::before{content:"";position:absolute;top:50%;width:6px;height:22px;margin-top:-11px;border-radius:3px;background:#3b2a20}
+.hole .door.l::before{right:8px}.hole .door.r::before{left:8px}
+.hole .door.l{transform-origin:left center}.hole .door.r{transform-origin:right center}
+.hole .seam{position:absolute;left:50%;top:4%;bottom:4%;width:3px;margin-left:-1.5px;background:#FFE7A0;box-shadow:0 0 14px 5px rgba(255,226,140,.85);animation:seam 1.8s ease-in-out infinite}
+@keyframes seam{50%{opacity:.35}}
+.cta{position:absolute;left:0;right:0;bottom:calc(14px + env(safe-area-inset-bottom));display:flex;justify-content:center;pointer-events:none;transition:opacity .3s}
+.cta-in{display:flex;flex-direction:column;align-items:center;background:var(--cream);color:var(--wood-d);border:3px solid #7E5230;box-shadow:0 5px 0 #7E5230;
+  border-radius:18px;padding:6px 22px 8px;font-weight:700;font-size:1rem;animation:pulse 1.4s ease-in-out infinite}
+.cta-in b{font-family:Pacifico,cursive;font-weight:400;font-size:1.35rem;line-height:1.3;color:#7E5230}
+@keyframes pulse{50%{transform:scale(1.05)}}
+.cta-t{display:inline-flex;align-items:center;gap:6px}
+.cta-t .ic{color:#5E8A3F;stroke-width:3;animation:nudge .9s ease-in-out infinite}
+@keyframes nudge{50%{transform:translateY(4px)}}
+.gate.open .door.l{transform:rotateY(-100deg)}
+.gate.open .door.r{transform:rotateY(100deg)}
+.gate.open .seam,.gate.open .cta{opacity:0}
+.gate.open .stage{transform:translate(-50%,-50%) scale(3.4)}
+.gate.gone{opacity:0;pointer-events:none}
 
-  .hang{position:relative;width:190px;height:218px;margin:0 auto;transform-origin:50% 0;animation:swing 4s ease-in-out infinite}
-  @keyframes swing{0%,100%{transform:rotate(-2.5deg)}50%{transform:rotate(2.5deg)}}
-  .hang .rope{position:absolute;left:0;top:0;width:190px;height:72px}
-  .frame{position:absolute;left:10px;top:40px;width:170px;height:170px;border-radius:50%;padding:11px;
-    background:conic-gradient(from 20deg,#b98152,#8c5a33,#c08a5a,#7e5230,#b98152);box-shadow:0 8px 0 rgba(0,0,0,.12)}
-  .frame .pic{position:relative;width:100%;height:100%;border-radius:50%;overflow:hidden;border:5px solid var(--cream);
-    background:linear-gradient(#bfe0f2 0 62%,#b5cf96 62% 75%,#8fb86a 75%)}
-  .frame .pic svg,.frame .pic img{position:absolute;inset:0;width:100%;height:100%;display:block}
-  .frame .pic img{object-fit:cover;filter:saturate(1.08) brightness(1.04) contrast(1.03)}
-  .hat{position:absolute;left:-24px;top:16px;width:104px;transform:rotate(-18deg);filter:drop-shadow(0 3px 0 rgba(0,0,0,.15))}
+/* ---------- TOPO: CENA DO BOLO ---------- */
+.hero{position:relative;text-align:center;padding:10px 0 0}
+.scene{position:relative;display:block;width:100%;height:auto;opacity:0;transform:scale(1.05);transform-origin:50% 70%;transition:opacity .9s .2s,transform 1.4s .2s cubic-bezier(.2,.8,.2,1)}
+.scene.in{opacity:1;transform:none}
+.blades{transform-box:fill-box;transform-origin:center;animation:spin 9s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.cloud{animation:float 9s ease-in-out infinite}
+.cloud.b{animation-duration:12s;animation-delay:-4s}
+@keyframes float{50%{transform:translateX(14px)}}
+.wave{transform-box:fill-box;transform-origin:15% 90%;animation:wave 2.4s ease-in-out infinite}
+@keyframes wave{0%,60%,100%{transform:rotate(0)}70%{transform:rotate(-14deg)}80%{transform:rotate(6deg)}90%{transform:rotate(-10deg)}}
 
-  .phrase-top{margin-top:8px;font-weight:700;font-size:1.05rem;color:var(--wood-d);letter-spacing:.04em}
-  .title{position:relative;display:flex;align-items:center;justify-content:center;gap:4px;margin-top:-6px}
-  .name{font-family:Pacifico,cursive;font-size:clamp(2.5rem,13vw,3.6rem);color:var(--wood-d);line-height:1.5;
-    text-shadow:3px 3px 0 var(--cream),-3px -3px 0 var(--cream),3px -3px 0 var(--cream),-3px 3px 0 var(--cream),0 6px 0 rgba(0,0,0,.08)}
-  .two{width:clamp(70px,21vw,96px);height:auto;aspect-ratio:96/130;margin-left:-4px;animation:bob 2.6s ease-in-out infinite}
-  @keyframes bob{50%{transform:translateY(-8px) rotate(4deg)}}
-  .aninhos{font-weight:800;font-size:1.5rem;color:var(--blue-d);margin-top:-14px}
-  .phrase{max-width:330px;margin:8px auto 0;font-size:1.1rem;line-height:1.35;font-weight:600}
+.plank{position:relative;z-index:2;display:inline-block;margin:-26px auto 0;padding:4px 36px 20px;border-radius:14px;
+  background:linear-gradient(180deg,#D7AE80 0%,#C08F5E 55%,#B07E50 100%);border:3px solid var(--wood-d);box-shadow:0 7px 0 rgba(90,55,30,.25)}
+.plank::before{content:"";position:absolute;inset:5px;border:2px dashed rgba(122,82,54,.4);border-radius:10px;pointer-events:none}
+.plank .nail{position:absolute;top:50%;width:9px;height:9px;margin-top:-4px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#d9cbb8,#7d6a58)}
+.plank .nail.a{left:11px}.plank .nail.b{right:11px}
+.plank h1{font-family:Pacifico,cursive;font-weight:400;font-size:clamp(2.6rem,12.5vw,3.4rem);line-height:1.3;color:var(--cream);text-shadow:0 3px 0 var(--wood-d)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.age{display:inline-block;margin-top:10px;font-weight:800;font-size:1.25rem;color:var(--blue-d);letter-spacing:.01em}
+.phrase{max-width:320px;margin:4px auto 0;font-size:1.08rem;line-height:1.4;font-weight:600;color:var(--ink);text-wrap:balance}
+.when-chip{position:relative;z-index:3;display:inline-flex;align-items:center;gap:10px;margin-top:14px;padding:6px 18px;border-radius:999px;background:var(--cream);
+  border:2px solid var(--wood-l);color:var(--ink);font-weight:800;font-size:1.08rem;box-shadow:0 4px 0 rgba(122,82,54,.18)}
+.when-chip .ic{color:var(--blue-d)}
+.when-chip i{width:5px;height:5px;border-radius:50%;background:var(--wood-l)}
 
-  /* ---------- FAZENDA ---------- */
-  .farm{position:relative;height:350px;margin-top:-72px}
-  .land{position:absolute;inset:0;width:100%;height:100%}
-  .blades{transform-box:fill-box;transform-origin:center;animation:spin 7s linear infinite}
-  @keyframes spin{to{transform:rotate(360deg)}}
-  .animals{position:absolute;left:0;right:0;bottom:14px;display:flex;justify-content:space-around;align-items:flex-end;padding:0 4px;z-index:2}
-  .animal{position:relative;width:23%;max-width:104px}
-  .animal svg{width:100%;display:block;transform-origin:50% 100%}
-  .animal.hop svg{animation:hop .6s cubic-bezier(.3,1.6,.5,1)}
-  @keyframes hop{0%{transform:scale(1,1)}20%{transform:scale(1.15,.82)}50%{transform:translateY(-26px) scale(.92,1.1)}80%{transform:scale(1.06,.94)}100%{transform:none}}
-  .bubble{position:absolute;left:50%;bottom:100%;transform:translate(-50%,10px) scale(.4);opacity:0;white-space:nowrap;background:#fff;border:3px solid var(--ink);
-    border-radius:14px;padding:2px 10px;font-weight:800;font-size:1rem;transition:all .25s cubic-bezier(.3,1.6,.5,1);pointer-events:none}
-  .bubble::after{content:"";position:absolute;left:50%;bottom:-9px;width:12px;height:12px;background:#fff;border-right:3px solid var(--ink);border-bottom:3px solid var(--ink);transform:translateX(-50%) rotate(45deg)}
-  .animal.talk .bubble{opacity:1;transform:translate(-50%,-4px) scale(1)}
-  .hint{display:flex;align-items:center;justify-content:center;gap:12px;width:max-content;max-width:100%;margin:-12px auto 0;
-    background:var(--cream);border:4px solid var(--wood-d);border-radius:18px;padding:8px 16px;box-shadow:0 5px 0 var(--wood-d);
-    color:var(--wood-d);text-align:center;animation:glow 1.6s ease-in-out infinite}
-  .hint span{font-weight:800;font-size:1.3rem;line-height:1.15}
-  .hint small{font-size:.9rem;font-weight:700;color:var(--ink)}
-  .hint .arr{width:24px;flex:none;animation:poke .8s ease-in-out infinite}
-  .hint .arr path{fill:var(--grass)}
-  @keyframes poke{50%{transform:translateY(-7px)}}
-  @keyframes glow{50%{transform:scale(1.04)}}
-  @keyframes poke{50%{transform:translateY(-5px)}}
+/* ---------- FAZENDINHA COM BICHINHOS ---------- */
+.farm{position:relative;height:262px;margin-top:-64px}
+.land{position:absolute;inset:0;width:100%;height:100%;z-index:1}
+.animals{position:absolute;left:0;right:0;bottom:14px;display:flex;justify-content:space-around;align-items:flex-end;padding:0 6px;z-index:5}
+.animal{position:relative;width:24.5%;max-width:112px;display:flex;flex-direction:column;align-items:center;user-select:none;-webkit-user-select:none}
+.animal .art{width:92%;display:block;transform-origin:50% 100%;margin-top:6px}
+.animal.hop .art{animation:hop .6s cubic-bezier(.3,1.6,.5,1)}
+@keyframes hop{0%{transform:scale(1,1)}20%{transform:scale(1.14,.84)}50%{transform:translateY(-24px) scale(.93,1.08)}80%{transform:scale(1.05,.95)}100%{transform:none}}
+.sign{position:relative;z-index:2;width:100%;padding:6px 2px 7px;border-radius:11px;color:var(--cream);text-align:center;
+  background:repeating-linear-gradient(0deg,#c18a58 0 13px,#b07a4b 13px 15px);border:3px solid #7E5230;box-shadow:0 4px 0 rgba(90,55,30,.25);
+  transform-origin:50% 160%;animation:wig 3.4s ease-in-out infinite;animation-delay:var(--d)}
+.sign::after{content:"";position:absolute;left:50%;top:100%;width:8px;height:22px;margin-left:-4px;background:linear-gradient(90deg,#9a6c45,#7d5536);z-index:-1;border-radius:0 0 3px 3px}
+.sign b{display:block;font-size:clamp(.92rem,4vw,1.08rem);line-height:1.1;font-weight:800;text-shadow:0 2px 0 rgba(90,55,30,.45)}
+.sign small{display:block;font-size:clamp(.72rem,3.1vw,.82rem);font-weight:700;line-height:1.15;margin-top:1px;color:#FFF3DF}
+.sign.go{background:#25D366;border-color:#13853f}
+@keyframes wig{0%,72%,100%{transform:rotate(0)}78%{transform:rotate(-6deg)}86%{transform:rotate(5deg)}93%{transform:rotate(-2deg)}}
+.bubble{position:absolute;left:50%;top:-36px;transform:translate(-50%,10px) scale(.4);opacity:0;white-space:nowrap;background:#fff;color:var(--ink);
+  border:2.5px solid var(--soft);border-radius:14px;padding:1px 10px;font-weight:800;font-size:.98rem;transition:all .25s cubic-bezier(.3,1.6,.5,1);pointer-events:none;z-index:3}
+.animal.talk .bubble{opacity:1;transform:translate(-50%,0) scale(1)}
 
-  /* ---------- CARDS ---------- */
-  .ground{background:linear-gradient(var(--grass),var(--grass-d));padding:0 16px 22px;position:relative}
-  .card{background:var(--cream);border-radius:22px;padding:22px 18px 20px;margin:0 auto 26px;position:relative;box-shadow:0 8px 0 rgba(0,0,0,.13);border:4px solid #e9dcc0}
-  .plank{position:absolute;left:50%;top:-20px;transform:translateX(-50%);white-space:nowrap;
-    background:repeating-linear-gradient(90deg,#c18a58 0 60px,#b47d4c 60px 62px);color:#fff;font-weight:800;font-size:1.05rem;
-    padding:5px 22px;border-radius:10px;border:3px solid var(--wood-d);text-shadow:0 2px 0 rgba(0,0,0,.25);letter-spacing:.03em}
-  .when{display:flex;gap:12px;align-items:stretch;justify-content:center;margin-top:10px}
-  .cal{width:96px;border-radius:14px;overflow:hidden;border:3px solid var(--ink);text-align:center;flex:none;background:#fff}
-  .cal b{display:block;background:#E36F5A;color:#fff;font-size:.85rem;padding:2px 0;letter-spacing:.08em}
-  .cal strong{display:block;font-size:2.6rem;line-height:1.1;padding-top:4px}
-  .cal span{display:block;font-size:.8rem;font-weight:700;padding-bottom:6px}
-  .when .info{display:flex;flex-direction:column;justify-content:center;text-align:left;font-size:1.05rem;line-height:1.3}
-  .when .info .big{font-size:1.6rem;font-weight:800;color:var(--blue-d)}
-  .count{display:flex;justify-content:center;gap:8px;margin-top:16px}
-  .count div{background:#fff;border:3px solid var(--sage-d);border-radius:14px;width:64px;padding:4px 0;text-align:center}
-  .count b{display:block;font-size:1.6rem;line-height:1.1;color:var(--grass-d)}
-  .count small{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em}
-  .count-msg{text-align:center;font-weight:800;color:var(--grass-d);margin-top:12px;font-size:1.2rem}
+.below{position:relative;background:linear-gradient(#7FA65A,#5E8A3F);padding:0 16px 8px}
+.hint{display:flex;align-items:center;justify-content:center;gap:12px;width:max-content;max-width:100%;margin:-10px auto 0;position:relative;z-index:3;
+  background:var(--cream);border-radius:18px;padding:9px 18px;color:var(--wood-d);text-align:center;
+  border:4px solid #7E5230;box-shadow:0 5px 0 #7E5230;animation:glow 1.8s ease-in-out infinite}
+.hint span{font-weight:800;font-size:1.22rem;line-height:1.15}
+.hint small{display:block;font-size:.88rem;font-weight:700;color:var(--soft)}
+.hint .ic{width:22px;height:22px;color:#5E8A3F;stroke-width:3;animation:poke .8s ease-in-out infinite}
+@keyframes poke{50%{transform:translateY(-6px)}}
+@keyframes glow{50%{transform:scale(1.035)}}
+footer{text-align:center;color:#fff;padding:24px 0 30px;text-shadow:0 3px 0 rgba(40,60,20,.25)}
+footer .nm{font-family:Pacifico,cursive;font-size:2rem;line-height:1.4}
 
-  .addr{text-align:center;font-size:1.1rem;line-height:1.35;margin:8px 0 12px}
-  .addr b{font-size:1.2rem}
-  .map{border-radius:16px;overflow:hidden;border:3px solid var(--ink);height:210px;background:#dfe9cf;position:relative}
-  .map{display:block;text-decoration:none}
-  .map svg{width:100%;height:100%;display:block}
-  .map .pin{animation:pinb 1.6s ease-in-out infinite}
-  @keyframes pinb{50%{transform:translateY(-8px)}}
-  .map-tag{position:absolute;left:50%;bottom:10px;transform:translateX(-50%);white-space:nowrap;background:var(--cream);color:var(--ink);font-weight:800;font-size:.9rem;border:2px solid var(--ink);border-radius:999px;padding:2px 12px}
-  .row{display:flex;gap:10px;margin-top:12px}
-  .btn{flex:1;display:flex;align-items:center;justify-content:center;gap:6px;text-decoration:none;font-weight:800;font-size:1rem;
-    padding:11px 12px;border-radius:14px;border:3px solid var(--ink);box-shadow:0 4px 0 var(--ink);transition:transform .1s,box-shadow .1s;color:var(--ink);background:#fff}
-  .btn:active{transform:translateY(4px);box-shadow:0 0 0 var(--ink)}
-  .btn.green{background:#25D366;color:#fff;border-color:#13853f;box-shadow:0 4px 0 #13853f;text-shadow:0 1px 0 rgba(0,0,0,.2)}
-  .btn.blue{background:var(--blue);color:#fff;border-color:var(--blue-d);box-shadow:0 4px 0 var(--blue-d)}
-  .btn.full{width:100%;margin-top:14px;font-size:1.15rem;padding:13px}
+/* ---------- JANELA DE DETALHES ---------- */
+.sheet-bg{position:fixed;inset:0;background:rgba(60,42,28,.42);z-index:70;opacity:0;pointer-events:none;transition:opacity .3s}
+.sheet-bg.on{opacity:1;pointer-events:auto}
+.sheet{position:fixed;left:50%;bottom:0;width:100%;max-width:480px;max-height:88vh;overflow-y:auto;z-index:71;transform:translate(-50%,105%);
+  transition:transform .4s cubic-bezier(.2,1.05,.4,1);background:var(--paper);border-radius:28px 28px 0 0;padding:14px 20px calc(24px + env(safe-area-inset-bottom));
+  box-shadow:0 -10px 40px rgba(60,40,20,.25)}
+.sheet.on{transform:translate(-50%,0)}
+.sheet .grain{border-radius:inherit}
+.grab{width:54px;height:6px;border-radius:9px;background:#DCCDB0;margin:0 auto 8px}
+.close{position:absolute;right:12px;top:10px;width:44px;height:44px;border-radius:50%;background:#EFE4CF;color:var(--wood-d);display:grid;place-items:center;z-index:2}
+.sheet section{display:none;position:relative}
+.sheet section.on{display:block}
+.sheet h2{display:flex;align-items:center;justify-content:center;gap:8px;font-size:1.5rem;color:var(--wood-d);margin:2px 0 10px}
+.sheet h2 .ic{color:var(--blue-d)}
+.when{display:flex;gap:14px;align-items:stretch;justify-content:center}
+.cal{width:98px;border-radius:16px;overflow:hidden;text-align:center;flex:none;background:#fff;box-shadow:0 0 0 2px var(--wood-l),0 4px 0 2px rgba(122,82,54,.15)}
+.cal b{display:block;background:#D9755F;color:#fff;font-size:.8rem;padding:3px 0;letter-spacing:.08em}
+.cal strong{display:block;font-size:2.7rem;line-height:1.1;padding-top:4px}
+.cal span{display:block;font-size:.85rem;font-weight:700;padding-bottom:6px;color:var(--soft)}
+.when .info{display:flex;flex-direction:column;justify-content:center;text-align:left;font-size:1.05rem;line-height:1.3;color:var(--soft)}
+.when .info .big{font-size:1.75rem;font-weight:800;color:var(--blue-d)}
+.count{display:flex;justify-content:center;gap:8px;margin-top:16px}
+.count div{background:#fff;border-radius:14px;width:66px;padding:5px 0;text-align:center;box-shadow:0 0 0 2px var(--sage2)}
+.count b{display:block;font-size:1.6rem;line-height:1.1;color:var(--ok-d)}
+.count small{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--soft)}
+.count-msg{text-align:center;font-weight:800;color:var(--ok-d);margin-top:12px;font-size:1.2rem}
+.addr{text-align:center;font-size:1.1rem;line-height:1.35;margin:2px 0 12px;color:var(--soft)}
+.addr b{font-size:1.2rem;color:var(--ink)}
+.map{border-radius:18px;overflow:hidden;height:220px;background:#E3ECD6;position:relative;box-shadow:0 0 0 2px var(--wood-l)}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.row{display:flex;gap:10px;margin-top:12px}
+.btn{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;min-height:48px;text-decoration:none;font-weight:800;font-size:1.02rem;
+  padding:10px 12px;border-radius:16px;color:var(--ink);background:#fff;box-shadow:0 0 0 2px var(--wood-l),0 4px 0 2px rgba(122,82,54,.25);transition:transform .1s}
+.btn:active{transform:translateY(3px)}
+.btn.blue{background:var(--blue);color:#fff;box-shadow:0 0 0 2px var(--blue-d),0 4px 0 2px var(--blue-d)}
+.btn.go{background:#25D366;color:#fff;box-shadow:0 0 0 2px #13853f,0 4px 0 2px #13853f;text-shadow:0 1px 0 rgba(0,0,0,.2)}
+.btn.full{width:100%;margin-top:14px;font-size:1.12rem;padding:12px}
+.gifts{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.gift{background:#fff;border-radius:18px;padding:14px 8px;text-align:center;box-shadow:0 0 0 2px var(--sage2)}
+.gift .ic{width:40px;height:40px;color:var(--blue-d);stroke-width:1.6}
+.gift b{display:block;font-size:1.05rem;margin-top:4px}
+.gift span{display:block;font-size:1.4rem;font-weight:800;color:var(--blue-d)}
+.note{text-align:center;margin-top:12px;font-size:1rem;line-height:1.4;color:var(--soft)}
+.note b{color:var(--ink)}
+.rsvp label{display:block;font-weight:700;margin:10px 0 4px}
+.rsvp input{width:100%;font:inherit;font-size:16px;padding:11px 13px;border-radius:14px;border:2px solid #DCCDB0;background:#fff;color:var(--ink);outline:none}
+.rsvp input:focus{border-color:var(--sage-d);box-shadow:0 0 0 3px rgba(143,176,112,.25)}
+.guest{display:flex;gap:8px;align-items:center;animation:pop .3s cubic-bezier(.3,1.6,.5,1)}
+@keyframes pop{from{transform:scale(.85);opacity:0}}
+.guest input{flex:1}
+.guest .rm{width:44px;height:44px;flex:none;border-radius:50%;background:#F4E0D8;color:#A24A3A;display:grid;place-items:center}
+.add{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;min-height:48px;margin-top:12px;border-radius:16px;border:2px dashed var(--sage-d);background:#F1F5E8;font-weight:800;font-size:1.02rem;color:var(--ok-d)}
+.total{text-align:center;margin-top:10px;font-weight:700;color:var(--soft)}
 
-  .gifts{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:10px}
-  .gift{background:#fff;border:3px dashed var(--sage-d);border-radius:16px;padding:12px 8px;text-align:center}
-  .gift .ico{font-size:2rem;line-height:1}
-  .gift b{display:block;font-size:1.05rem;margin-top:4px}
-  .gift span{display:block;font-size:1.35rem;font-weight:800;color:var(--blue-d)}
-  .note{text-align:center;margin-top:12px;font-size:1rem;line-height:1.35}
-
-  .rsvp label{display:block;font-weight:700;margin:6px 0 4px}
-  .rsvp input{width:100%;font:inherit;font-size:1.05rem;padding:10px 12px;border-radius:12px;border:3px solid #d8c9a8;background:#fff;color:var(--ink);outline:none}
-  .rsvp input:focus{border-color:var(--sage-d)}
-  .guest{display:flex;gap:8px;align-items:center;margin-top:8px;animation:pop .3s cubic-bezier(.3,1.6,.5,1)}
-  @keyframes pop{from{transform:scale(.8);opacity:0}}
-  .guest input{flex:1}
-  .guest .rm{width:40px;height:40px;flex:none;border-radius:50%;background:#f3d9d2;color:#a24a3a;font-weight:800;font-size:1rem}
-  .add{display:block;width:100%;margin-top:12px;padding:10px;border-radius:14px;border:3px dashed var(--sage-d);background:#f2f6ea;font-weight:800;font-size:1.05rem;color:var(--grass-d)}
-  .total{text-align:center;margin-top:10px;font-weight:700}
-  .stepper{display:none}
-  .stepper button{width:46px;height:46px;border-radius:50%;background:var(--sage);border:3px solid var(--sage-d);font-size:1.6rem;font-weight:800;line-height:1}
-  .stepper output{font-size:2rem;font-weight:800;min-width:40px;text-align:center}
-
-  .chip{position:relative;z-index:3;display:inline-flex;gap:8px;align-items:center;margin-top:10px;background:var(--cream);border:3px solid var(--wood-d);border-radius:999px;padding:4px 16px;font-weight:800;font-size:1.05rem;box-shadow:0 3px 0 rgba(0,0,0,.12)}
-  .chip i{font-style:normal;color:var(--blue-d)}
-  .menu{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-  .mbtn{position:relative;display:flex;flex-direction:column;align-items:center;gap:0;padding:12px 6px 10px;border-radius:18px;
-    background:var(--cream);border:4px solid var(--wood-d);box-shadow:0 5px 0 var(--wood-d);transition:transform .1s,box-shadow .1s}
-  .mbtn:active{transform:translateY(5px);box-shadow:0 0 0 var(--wood-d)}
-  .mbtn .ico{font-size:2rem;line-height:1.1}
-  .mbtn b{font-size:1.15rem;line-height:1.2}
-  .mbtn small{font-size:.85rem;font-weight:700;color:var(--wood-d);opacity:.85}
-  .mbtn.go{background:#25D366;border-color:#13853f;box-shadow:0 5px 0 #13853f;color:#fff}
-  .mbtn.go small{color:#fff;opacity:.95}
-  .mbtn.go:active{box-shadow:0 0 0 #13853f}
-  .mini-count{text-align:center;color:#fff;font-weight:700;margin-top:14px;font-size:1rem;text-shadow:0 2px 0 rgba(0,0,0,.18)}
-  .mini-count b{font-size:1.2rem}
-
-  .sheet-bg{position:fixed;inset:0;background:rgba(40,28,18,.45);z-index:70;opacity:0;pointer-events:none;transition:opacity .3s}
-  .sheet-bg.on{opacity:1;pointer-events:auto}
-  .sheet{position:fixed;left:50%;bottom:0;width:100%;max-width:480px;max-height:88vh;overflow-y:auto;z-index:71;
-    transform:translate(-50%,105%);transition:transform .38s cubic-bezier(.2,1.1,.4,1);background:var(--cream);
-    border-radius:26px 26px 0 0;border:4px solid var(--wood-d);border-bottom:0;padding:16px 18px calc(22px + env(safe-area-inset-bottom))}
-  .sheet.on{transform:translate(-50%,0)}
-  .grab{width:54px;height:6px;border-radius:9px;background:#d8c9a8;margin:0 auto 6px}
-  .close{position:absolute;right:12px;top:10px;width:38px;height:38px;border-radius:50%;background:#efe4cc;font-size:1.1rem;font-weight:800;color:var(--wood-d)}
-  .sheet h2{text-align:center;font-size:1.45rem;color:var(--wood-d);margin:2px 0 6px}
-  .sheet section{display:none}
-  .sheet section.on{display:block}
-  .hint,.animal,.mbtn,.door,footer{user-select:none;-webkit-user-select:none}
-  .sign2{position:relative;display:flex;flex-direction:column;align-items:center;margin:0 auto -6px;width:98%;z-index:2;
-    background:repeating-linear-gradient(0deg,#c18a58 0 13px,#b07a4b 13px 15px);border:3px solid var(--wood-d);border-radius:9px;
-    padding:4px 2px 3px;color:#fff;text-shadow:0 1px 0 rgba(0,0,0,.35);box-shadow:0 3px 0 rgba(0,0,0,.18);
-    transform-origin:50% 140%;animation:wig 3.2s ease-in-out infinite;animation-delay:var(--d)}
-  .sign2::after{content:"";position:absolute;left:50%;top:100%;width:7px;height:26px;margin-left:-3.5px;background:#8a5e3a;border:2px solid var(--wood-d);border-top:0;z-index:-1}
-  .sign2 b{font-size:clamp(.72rem,3.4vw,.95rem);line-height:1.1;letter-spacing:.02em;text-transform:uppercase}
-  .sign2 small{font-size:clamp(.62rem,2.8vw,.75rem);font-weight:700;line-height:1.1;opacity:.95}
-  .sign2.go{background:#25D366;border-color:#13853f}
-  .sign2.go::after{background:#8a5e3a}
-  @keyframes wig{0%,70%,100%{transform:rotate(0)}76%{transform:rotate(-7deg)}84%{transform:rotate(6deg)}92%{transform:rotate(-3deg)}}
-  .animal .bubble{bottom:auto;top:-34px}
-  .animal svg{margin-top:14px}
-  footer{text-align:center;color:#fff;padding:26px 0 30px;text-shadow:0 3px 0 rgba(0,0,0,.2)}
-  footer .nm{font-family:Pacifico,cursive;font-size:2.1rem;line-height:1.4}
-
-  .sound{position:fixed;top:12px;right:max(12px,calc(50% - 228px));z-index:40;width:46px;height:46px;border-radius:50%;background:var(--cream);
-    border:3px solid var(--wood-d);font-size:1.3rem;box-shadow:0 3px 0 rgba(0,0,0,.18);display:none}
-  .sound.show{display:block}
-  .toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,120px);background:var(--ink);color:#fff;font-weight:700;padding:10px 18px;border-radius:14px;z-index:80;transition:transform .3s;max-width:90vw;text-align:center}
-  .toast.show{transform:translate(-50%,0)}
-  .confetti{position:fixed;top:-40px;z-index:45;pointer-events:none;font-size:1.6rem;animation:fall linear forwards}
-  @keyframes fall{to{transform:translateY(110vh) rotate(540deg)}}
-
-  .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
-  .reveal.in{opacity:1;transform:none}
-  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+.sound{position:fixed;top:12px;right:max(12px,calc(50% - 228px));z-index:40;width:46px;height:46px;border-radius:50%;background:rgba(251,246,234,.92);
+  color:var(--wood-d);box-shadow:0 0 0 2px var(--wood-l),0 3px 0 2px rgba(122,82,54,.25);display:none;place-items:center}
+.sound.show{display:grid}
+.sound .ic{width:22px;height:22px}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,140px);background:var(--ink);color:#fff;font-weight:700;padding:10px 18px;border-radius:14px;z-index:80;transition:transform .3s;max-width:90vw;text-align:center}
+.toast.show{transform:translate(-50%,0)}
+.petal{position:fixed;top:-30px;z-index:45;pointer-events:none;animation:fall linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(600deg)}}
+:focus-visible{outline:3px solid var(--blue-d);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.scene{opacity:1;transform:none}}
 </style>
 </head>
 <body class="locked">
 
-<!-- PORTEIRA DE ABERTURA -->
-<div class="gate" id="gate" role="button" tabindex="0" aria-label="Toque para abrir o convite">
-  <div class="door l"><div class="brace"></div></div>
-  <div class="door r"><div class="brace"></div></div>
-  <div class="sign">
-    <small>Convite especial</small>
-    <div class="nm">Joaquim</div>
-    <small>2 aninhos</small>
-    <span class="tap">Toque para abrir 🐮</span>
-  </div>
-</div>
+<!-- ===== definições de desenho (aquarela, cores, ícones) ===== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <filter id="wc" x="-6%" y="-6%" width="112%" height="112%">
+      <feTurbulence type="fractalNoise" baseFrequency=".045" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="3.2" xChannelSelector="R" yChannelSelector="G" result="d"/>
+      <feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="3" result="g"/>
+      <feColorMatrix in="g" type="matrix" values="0 0 0 0 .35  0 0 0 0 .25  0 0 0 0 .15  0 0 0 -1.1 .62" result="ga"/>
+      <feComposite in="ga" in2="d" operator="in" result="gm"/>
+      <feMerge><feMergeNode in="d"/><feMergeNode in="gm"/></feMerge>
+    </filter>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="3"/></filter>
+    <radialGradient id="gSkin" cx="38%" cy="32%" r="75%"><stop offset="0" stop-color="#F6CFAE"/><stop offset="1" stop-color="#DDA27C"/></radialGradient>
+    <radialGradient id="gJeans" cx="35%" cy="25%" r="85%"><stop offset="0" stop-color="#97BCE0"/><stop offset="1" stop-color="#628FBE"/></radialGradient>
+    <radialGradient id="gHat" cx="35%" cy="25%" r="85%"><stop offset="0" stop-color="#C08A57"/><stop offset="1" stop-color="#8F5B32"/></radialGradient>
+    <radialGradient id="gBrim" cx="40%" cy="20%" r="90%"><stop offset="0" stop-color="#D4A271"/><stop offset="1" stop-color="#A8723F"/></radialGradient>
+    <radialGradient id="gBoot" cx="35%" cy="25%" r="85%"><stop offset="0" stop-color="#A97448"/><stop offset="1" stop-color="#77492A"/></radialGradient>
+    <radialGradient id="gCow" cx="35%" cy="28%" r="85%"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#E7E1D6"/></radialGradient>
+    <radialGradient id="gHorse" cx="35%" cy="28%" r="85%"><stop offset="0" stop-color="#EDBE88"/><stop offset="1" stop-color="#C98D55"/></radialGradient>
+    <radialGradient id="gDuck" cx="35%" cy="28%" r="85%"><stop offset="0" stop-color="#FFE992"/><stop offset="1" stop-color="#EDBE36"/></radialGradient>
+    <radialGradient id="gPig" cx="35%" cy="28%" r="85%"><stop offset="0" stop-color="#FCD8DF"/><stop offset="1" stop-color="#EBA3B3"/></radialGradient>
+    <radialGradient id="gSun" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#FFF1BF"/><stop offset=".55" stop-color="#FFE08A"/><stop offset="1" stop-color="#FFE08A" stop-opacity="0"/></radialGradient>
+    <linearGradient id="gWood" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D3A777"/><stop offset="1" stop-color="#AE7C4E"/></linearGradient>
+    <linearGradient id="gHouse" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#BBD7EB"/><stop offset="1" stop-color="#93BBDA"/></linearGradient>
+    <linearGradient id="gStone" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#DAD4C8"/><stop offset="1" stop-color="#B3AB9C"/></linearGradient>
+    <radialGradient id="gLeaf" cx="35%" cy="30%" r="80%"><stop offset="0" stop-color="#A8D07F"/><stop offset="1" stop-color="#6E9E4E"/></radialGradient>
+    <linearGradient id="gCake" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#DCEACB"/><stop offset="1" stop-color="#C2D9A8"/></linearGradient>
+    <pattern id="xad" width="16" height="16" patternUnits="userSpaceOnUse">
+      <rect width="16" height="16" fill="#F2F7FC"/><rect width="16" height="8" fill="#8DB6D9" opacity=".5"/><rect width="8" height="16" fill="#8DB6D9" opacity=".5"/>
+    </pattern>
 
-<button class="sound" id="sound" aria-label="Ligar ou desligar música">🔊</button>
-<div class="toast" id="toast"></div>
+    <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.5-7-12a7 7 0 0 1 14 0c0 5.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></symbol>
+    <symbol id="i-gift" viewBox="0 0 24 24"><rect x="3" y="9" width="18" height="12" rx="2"/><path d="M3 13h18M12 9v12M12 9c-2-4-7-4-6-1 .5 1.5 4 1.5 6 1zm0 0c2-4 7-4 6-1-.5 1.5-4 1.5-6 1z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/></symbol>
+    <symbol id="i-shirt" viewBox="0 0 24 24"><path d="M8 3L3 6l2 5 3-1v11h8V10l3 1 2-5-5-3c-1 2-2.5 3-4 3S9 5 8 3z"/></symbol>
+    <symbol id="i-shoe" viewBox="0 0 24 24"><path d="M3 17v-7c3 0 5-2 6-5l3 1c-.5 2 0 4 3 5l5 2c1 .5 1 4 0 4H3zM3 20h18"/></symbol>
+    <symbol id="i-map" viewBox="0 0 24 24"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2-6-2zM9 4v14M15 6v14"/></symbol>
+    <symbol id="i-car" viewBox="0 0 24 24"><path d="M5 16v-5l2-5h10l2 5v5M3 16h18v3H3zM5 11h14"/></symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7L4 20z"/><path d="M9.5 9c0 3 2.5 5.5 5.5 5.5"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+    <symbol id="i-sound" viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M16 9a4 4 0 0 1 0 6M18.5 6.5a8 8 0 0 1 0 11"/></symbol>
+    <symbol id="i-mute" viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M17 9l5 6M22 9l-5 6"/></symbol>
+    <symbol id="i-save" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4M12 13v5M9.5 15.5h5"/></symbol>
+    <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 20V5M6 11l6-6 6 6"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 4v15M6 13l6 6 6-6"/></symbol>
+  </defs>
+</svg>
 
-<main class="app">
-  <!-- ===== HERO ===== -->
-  <section class="hero">
-    <div class="sun"></div>
-    <div class="cloud" style="width:90px;height:28px;top:70px;animation-duration:38s;animation-delay:-10s"></div>
-    <div class="cloud" style="width:70px;height:22px;top:170px;animation-duration:30s;animation-delay:-22s"></div>
-    <div class="cloud" style="width:110px;height:32px;top:300px;animation-duration:46s;animation-delay:-3s"></div>
-
-    <div class="hang">
-      <svg class="rope" viewBox="0 0 190 72"><path d="M95 6 L25 62 M95 6 L165 62" stroke="#9a7650" stroke-width="4" fill="none" stroke-linecap="round"/><circle cx="95" cy="6" r="6" fill="#6b4a2e"/></svg>
-      <div class="frame"><div class="pic">
-        <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><ellipse cx="22" cy="22" rx="14" ry="5" fill="#fff"/><ellipse cx="78" cy="14" rx="11" ry="4" fill="#fff"/><g fill="#C08A5A" stroke="#7E5230" stroke-width=".8"><rect x="0" y="62" width="100" height="3"/><rect x="0" y="70" width="100" height="3"/><path d="M4 58 l3 -4 l3 4 v20 h-6z M18 58 l3 -4 l3 4 v20 h-6z M76 58 l3 -4 l3 4 v20 h-6z M90 58 l3 -4 l3 4 v20 h-6z"/></g></svg>
-        <img src="joaquim-sem-fundo.png" alt="Foto do Joaquim sorrindo">
-      </div></div>
-      <!-- chapéu de cowboy -->
-      <svg class="hat" viewBox="0 0 120 70" aria-hidden="true">
-        <path d="M30 40 C30 10 42 4 52 10 C56 4 64 4 68 10 C78 4 90 10 90 40 Z" fill="#A86F3F" stroke="#5c3a1e" stroke-width="3"/>
-        <path d="M31 33 Q60 40 89 33 L90 41 Q60 48 30 41 Z" fill="#5c3a1e"/>
-        <path d="M4 44 C14 60 40 56 60 56 C80 56 106 60 116 44 C108 40 96 46 88 42 C70 50 50 50 32 42 C24 46 12 40 4 44Z" fill="#C08552" stroke="#5c3a1e" stroke-width="3" stroke-linejoin="round"/>
-      </svg>
-    </div>
-
-    <p class="phrase-top">IHAAA! TEM FESTA NA FAZENDINHA</p>
-    <div class="title">
-      <span class="name">Joaquim</span>
-      <svg class="two" viewBox="0 0 96 130" aria-label="2">
+<!-- ===== CELEIRO DE ABERTURA ===== -->
+<div class="gate" id="gate" role="button" tabindex="0" aria-label="Toque na porta do celeiro para abrir o convite">
+  <div class="gate-in">
+    <div class="stage" id="stage">
+      <svg class="gate-art" viewBox="0 0 400 760" aria-hidden="true">
         <defs>
-          <pattern id="xadrez" width="14" height="14" patternUnits="userSpaceOnUse">
-            <rect width="14" height="14" fill="#EEF5FB"/>
-            <rect width="14" height="7" fill="#8DB6D9" opacity=".55"/>
-            <rect width="7" height="14" fill="#8DB6D9" opacity=".55"/>
-          </pattern>
+          <linearGradient id="gSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#BFDDEE"/><stop offset="1" stop-color="#E8F4F8"/></linearGradient>
+          <pattern id="tabua" width="20" height="40" patternUnits="userSpaceOnUse"><rect width="20" height="40" fill="#C0634A"/><rect x="18" width="2" height="40" fill="#A44F39"/></pattern>
+          <pattern id="telha" width="22" height="14" patternUnits="userSpaceOnUse"><rect width="22" height="14" fill="#8F3F2E"/><path d="M0 13 H22 M11 0 V7 M0 7 H22 M0 0 V7" stroke="#76301F" stroke-width="1.6"/></pattern>
         </defs>
-        <text x="48" y="118" text-anchor="middle" font-family="'Baloo 2',sans-serif" font-weight="800" font-size="150" fill="#fff" stroke="#fff" stroke-width="16" stroke-linejoin="round">2</text>
-        <text x="48" y="118" text-anchor="middle" font-family="'Baloo 2',sans-serif" font-weight="800" font-size="150" fill="url(#xadrez)" stroke="#5f86ad" stroke-width="3" stroke-linejoin="round">2</text>
-      </svg>
-    </div>
-    <div class="aninhos">aninhos!</div>
-    <p class="phrase">A bicharada já está avisada… Joaquim faz 2 anos e <b>você</b> é nosso convidado especial! 🤠</p>
-    <div class="chip">📅 Sáb, 12/12 <i>•</i> 🕖 19h</div>
-  </section>
-
-  <!-- ===== FAZENDA ===== -->
-  <section class="farm">
-    <svg class="land" viewBox="0 0 400 300" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
-      <defs>
-        <pattern id="cerca" width="34" height="80" patternUnits="userSpaceOnUse">
-          <path d="M8 20 L17 8 L26 20 V80 H8Z" fill="#C08A5A" stroke="#7E5230" stroke-width="2.5"/>
-        </pattern>
-      </defs>
-      <path d="M0 150 Q100 95 210 140 T400 120 V300 H0Z" fill="#B5CF96"/>
-      <path d="M0 185 Q120 140 250 178 T400 165 V300 H0Z" fill="#9DBF78"/>
-      <!-- moinho -->
-      <g transform="translate(62 110)">
-        <path d="M-14 105 L-8 20 H8 L14 105Z" fill="#C9C2B4" stroke="#857c6c" stroke-width="2.5"/>
-        <path d="M-10 50 h8 M2 70 h8 M-12 88 h7" stroke="#a39a89" stroke-width="2"/>
-        <path d="M-12 22 L0 6 L12 22Z" fill="#8c5a33" stroke="#5c3a1e" stroke-width="2"/>
-        <g class="blades">
-          <g fill="#F2D57E" stroke="#a07b2c" stroke-width="1.6">
-            <rect x="-5" y="-48" width="10" height="44"/><rect x="-5" y="4" width="10" height="44"/>
-            <rect x="-48" y="-5" width="44" height="10"/><rect x="4" y="-5" width="44" height="10"/>
-          </g>
-          <circle r="5" fill="#7E5230"/>
-        </g>
-      </g>
-      <!-- casinha azul -->
-      <g transform="translate(300 118)">
-        <rect x="-6" y="-30" width="12" height="26" fill="#a3704a" stroke="#5c3a1e" stroke-width="2"/>
-        <path d="M-44 12 L0 -28 L44 12Z" fill="#8C5A33" stroke="#5c3a1e" stroke-width="3" stroke-linejoin="round"/>
-        <rect x="-36" y="10" width="72" height="62" fill="#A9CBE3" stroke="#4E7CA8" stroke-width="3"/>
-        <rect x="-12" y="36" width="24" height="36" fill="#7E5230" stroke="#5c3a1e" stroke-width="2.5"/>
-        <path d="M-12 36 L12 72 M12 36 L-12 72" stroke="#5c3a1e" stroke-width="2"/>
-        <circle cx="0" cy="22" r="7" fill="#fff" stroke="#4E7CA8" stroke-width="2.5"/>
-      </g>
-      <!-- árvore -->
-      <g transform="translate(372 116)">
-        <rect x="-5" y="20" width="10" height="56" fill="#8C5A33"/>
-        <circle cx="0" cy="8" r="26" fill="#7FAE5C"/><circle cx="-16" cy="22" r="18" fill="#6E9E4E"/><circle cx="15" cy="24" r="18" fill="#6E9E4E"/><circle cx="2" cy="-10" r="18" fill="#8DBD68"/>
-      </g>
-      <!-- cerca -->
-      <rect x="0" y="216" width="400" height="9" fill="#C08A5A" stroke="#7E5230" stroke-width="2"/>
-      <rect x="0" y="246" width="400" height="9" fill="#C08A5A" stroke="#7E5230" stroke-width="2"/>
-      <rect x="-4" y="196" width="410" height="80" fill="url(#cerca)"/>
-      <path d="M0 266 Q200 250 400 266 V300 H0Z" fill="#7FA65A"/>
-      <g fill="#6E9E4E"><path d="M30 268 l4 -14 l3 14 l4 -10 l2 10Z"/><path d="M180 262 l4 -14 l3 14 l4 -10 l2 10Z"/><path d="M330 266 l4 -14 l3 14 l4 -10 l2 10Z"/></g>
-    </svg>
-
-    <div class="animals">
-      <!-- VACA -->
-      <button class="animal" data-a="vaca" data-open="quando" style="--d:0.0s" aria-label="Vaquinha">
-        <span class="bubble">Muuuu!</span>
-        <span class="sign2"><b>Quando</b><small>12/12 • 19h</small></span>
-        <svg viewBox="0 0 140 150">
+        <rect width="400" height="760" fill="url(#gSky)"/>
+        <circle cx="330" cy="120" r="64" fill="#FFE08A" opacity=".18"/><circle cx="330" cy="120" r="48" fill="#FFE08A" opacity=".35"/><circle cx="330" cy="120" r="34" fill="#FFE08A"/>
+        <g class="cloud"><ellipse cx="80" cy="110" rx="42" ry="15" fill="#fff" stroke="#3b2a20" stroke-width="5"/><ellipse cx="66" cy="100" rx="20" ry="15" fill="#fff" stroke="#3b2a20" stroke-width="5"/><ellipse cx="94" cy="96" rx="24" ry="19" fill="#fff" stroke="#3b2a20" stroke-width="5"/><ellipse cx="80" cy="110" rx="42" ry="15" fill="#fff"/><ellipse cx="66" cy="100" rx="20" ry="15" fill="#fff"/><ellipse cx="94" cy="96" rx="24" ry="19" fill="#fff"/></g>
+        <g class="cloud b"><ellipse cx="230" cy="70" rx="30" ry="10" fill="#fff" stroke="#3b2a20" stroke-width="5"/><ellipse cx="240" cy="62" rx="16" ry="12" fill="#fff" stroke="#3b2a20" stroke-width="5"/><ellipse cx="230" cy="70" rx="30" ry="10" fill="#fff"/><ellipse cx="240" cy="62" rx="16" ry="12" fill="#fff"/></g>
+        <path d="M-10 470 Q90 400 200 440 T410 420 V760 H-10Z" fill="#B5CF96"/>
+        <path d="M-10 520 Q120 470 240 505 T410 495 V760 H-10Z" fill="#9DBF78"/>
+        <!-- vaquinha espiando atrás do celeiro -->
+        <g class="idle peek"><g transform="translate(26 452) scale(0.56)">
           <g stroke="#3b2a20" stroke-width="3"><rect x="44" y="116" width="16" height="26" rx="6" fill="#fff"/><rect x="80" y="116" width="16" height="26" rx="6" fill="#fff"/></g>
           <rect x="45.5" y="133" width="13" height="8" rx="3" fill="#3b2a20"/><rect x="81.5" y="133" width="13" height="8" rx="3" fill="#3b2a20"/>
           <path d="M110 100 q16 -4 14 14" stroke="#3b2a20" stroke-width="3" fill="none"/>
@@ -351,14 +303,9 @@
           <circle cx="55" cy="52" r="5" fill="#2b1d14"/><circle cx="56.5" cy="50.5" r="1.7" fill="#fff"/>
           <circle cx="85" cy="52" r="5" fill="#2b1d14"/><circle cx="86.5" cy="50.5" r="1.7" fill="#fff"/>
           <circle cx="44" cy="64" r="5" fill="#F6B8B8" opacity=".8"/><circle cx="96" cy="64" r="5" fill="#F6B8B8" opacity=".8"/>
-        </svg>
-      </button>
-
-      <!-- CAVALO -->
-      <button class="animal" data-a="cavalo" data-open="onde" style="--d:0.35s" aria-label="Cavalinho">
-        <span class="bubble">Hiiiiin!</span>
-        <span class="sign2"><b>Onde</b><small>endereço</small></span>
-        <svg viewBox="0 0 140 150">
+        </g></g>
+        <!-- cavalo olhando por cima da cerca -->
+        <g class="idle nod"><g transform="translate(300 474) scale(0.54)">
           <path d="M108 96 q22 6 14 34 q-10 -4 -10 -18z" fill="#8B5A2B" stroke="#5c3a1e" stroke-width="2.5"/>
           <g stroke="#5c3a1e" stroke-width="3" fill="#D9A066"><rect x="44" y="116" width="16" height="26" rx="6"/><rect x="80" y="116" width="16" height="26" rx="6"/></g>
           <rect x="45.5" y="133" width="13" height="8" rx="3" fill="#5c3a1e"/><rect x="81.5" y="133" width="13" height="8" rx="3" fill="#5c3a1e"/>
@@ -373,14 +320,40 @@
           <circle cx="56" cy="56" r="5" fill="#2b1d14"/><circle cx="57.5" cy="54.5" r="1.7" fill="#fff"/>
           <circle cx="84" cy="56" r="5" fill="#2b1d14"/><circle cx="85.5" cy="54.5" r="1.7" fill="#fff"/>
           <circle cx="46" cy="68" r="5" fill="#F0A58E" opacity=".8"/><circle cx="94" cy="68" r="5" fill="#F0A58E" opacity=".8"/>
-        </svg>
-      </button>
-
-      <!-- PATINHO -->
-      <button class="animal" data-a="pato" data-open="presente" style="--d:0.7s" aria-label="Patinho">
-        <span class="bubble">Quá quá!</span>
-        <span class="sign2"><b>Presente</b><small>sugestão</small></span>
-        <svg viewBox="0 0 140 150">
+        </g></g>
+        <!-- cerca do fundo -->
+        <g><path d="M-4 600 V556 L3 546 L10 556 V600Z" fill="#C08A5A" stroke="#3b2a20" stroke-width="2"/><path d="M18 600 V556 L25 546 L32 556 V600Z" fill="#C08A5A" stroke="#3b2a20" stroke-width="2"/><path d="M40 600 V556 L47 546 L54 556 V600Z" fill="#C08A5A" stroke="#3b2a20" stroke-width="2"/><path d="M62 600 V556 L69 546 L76 556 V600Z" fill="#C08A5A" stroke="#3b2a20" stroke-width="2"/><path d="M330 600 V556 L337 546 L344 556 V600Z" fill="#C08A5A" stroke="#3b2a20" stroke-width="2"/><path d="M352 600 V556 L359 546 L366 556 V600Z" fill="#C08A5A" stroke="#3b2a20" stroke-width="2"/><path d="M374 600 V556 L381 546 L388 556 V600Z" fill="#C08A5A" stroke="#3b2a20" stroke-width="2"/><path d="M396 600 V556 L403 546 L410 556 V600Z" fill="#C08A5A" stroke="#3b2a20" stroke-width="2"/>
+          <rect x="-10" y="562" width="90" height="8" fill="#C08A5A" stroke="#3b2a20" stroke-width="2"/><rect x="-10" y="580" width="90" height="8" fill="#C08A5A" stroke="#3b2a20" stroke-width="2"/>
+          <rect x="324" y="562" width="90" height="8" fill="#C08A5A" stroke="#3b2a20" stroke-width="2"/><rect x="324" y="580" width="90" height="8" fill="#C08A5A" stroke="#3b2a20" stroke-width="2"/></g>
+        <!-- celeiro -->
+        <path d="M70 330 V618 H330 V330Z" fill="url(#tabua)" stroke="#3b2a20" stroke-width="3"/>
+        <path d="M48 338 L92 236 L200 176 L308 236 L352 338Z" fill="url(#telha)" stroke="#3b2a20" stroke-width="3.5" stroke-linejoin="round"/>
+        <path d="M60 334 L98 244 L200 188 L302 244 L340 334" fill="none" stroke="#FBF6EA" stroke-width="6" stroke-linejoin="round"/>
+        <path d="M70 330 V618 M330 330 V618" stroke="#FBF6EA" stroke-width="7"/>
+        <!-- porta do palheiro com feno -->
+        <rect x="170" y="226" width="60" height="62" fill="#5a3d28" stroke="#FBF6EA" stroke-width="5"/>
+        <path d="M172 286 q8 -22 18 -10 q6 -18 14 -4 q8 -16 14 0 q6 -12 10 4 v10 h-56z" fill="#EBCB6E" stroke="#B08A2E" stroke-width="1.5"/>
+        <path d="M200 226 V288" stroke="#FBF6EA" stroke-width="3"/>
+        <!-- placa -->
+        <g transform="translate(200 352)">
+          <rect x="-96" y="-24" width="192" height="50" rx="10" fill="#C99A6B" stroke="#3b2a20" stroke-width="3"/>
+          <rect x="-88" y="-17" width="176" height="36" rx="7" fill="none" stroke="#7E5230" stroke-width="1.5" stroke-dasharray="5 4"/>
+          <text x="0" y="12" text-anchor="middle" font-family="Pacifico,cursive" font-size="25" fill="#FBF6EA" stroke="#7E5230" stroke-width="4" paint-order="stroke">Joaquim · 2 anos</text>
+        </g>
+        <!-- moldura da porta e lampião -->
+        <rect x="114" y="384" width="172" height="234" fill="none" stroke="#FBF6EA" stroke-width="8"/>
+        <rect x="114" y="384" width="172" height="234" fill="none" stroke="#3b2a20" stroke-width="2"/>
+        <g transform="translate(94 410)"><path d="M0 -14 V-6" stroke="#3b2a20" stroke-width="2"/><rect x="-8" y="-6" width="16" height="22" rx="4" fill="#FFE29A" stroke="#3b2a20" stroke-width="2"/><circle cy="5" r="11" fill="#FFE29A" opacity=".35" class="lamp"/></g>
+        <!-- chão: caminho de terra, grama, feno e flores -->
+        <path d="M-10 612 H410 V760 H-10Z" fill="#9DBF78" stroke="#3b2a20" stroke-width="2.5"/>
+        <path d="M132 618 H268 L330 760 H70Z" fill="#E2C99A"/>
+        <path d="M150 650 h18 M232 680 h22 M120 720 h20 M250 735 h18" stroke="#CDB07C" stroke-width="3" stroke-linecap="round"/>
+        <g transform="translate(14 600)"><rect width="64" height="40" rx="7" fill="#EBCB6E" stroke="#3b2a20" stroke-width="2.5"/><path d="M8 11 h48 M8 20 h48 M8 29 h48" stroke="#C9A24C" stroke-width="2"/><path d="M21 0 v40 M43 0 v40" stroke="#A8743F" stroke-width="2.5"/></g>
+        <g transform="translate(40 628)"><rect width="64" height="40" rx="7" fill="#EBCB6E" stroke="#3b2a20" stroke-width="2.5"/><path d="M8 11 h48 M8 20 h48 M8 29 h48" stroke="#C9A24C" stroke-width="2"/><path d="M21 0 v40 M43 0 v40" stroke="#A8743F" stroke-width="2.5"/></g>
+        <path d="M22.3 700.0 l3.3 -15.4 l3.3 11.0 l3.3 -17.6 l3.3 13.2 l3.3 -13.2 l2.2 22.0Z" fill="#7FA65A" stroke="#5E8A3F" stroke-width="1.3" stroke-linejoin="round"/><path d="M102.3 668.0 l3.3 -15.4 l3.3 11.0 l3.3 -17.6 l3.3 13.2 l3.3 -13.2 l2.2 22.0Z" fill="#7FA65A" stroke="#5E8A3F" stroke-width="1.3" stroke-linejoin="round"/><path d="M292.3 640.0 l3.3 -15.4 l3.3 11.0 l3.3 -17.6 l3.3 13.2 l3.3 -13.2 l2.2 22.0Z" fill="#7FA65A" stroke="#5E8A3F" stroke-width="1.3" stroke-linejoin="round"/><path d="M364.3 672.0 l3.3 -15.4 l3.3 11.0 l3.3 -17.6 l3.3 13.2 l3.3 -13.2 l2.2 22.0Z" fill="#7FA65A" stroke="#5E8A3F" stroke-width="1.3" stroke-linejoin="round"/><path d="M342.3 724.0 l3.3 -15.4 l3.3 11.0 l3.3 -17.6 l3.3 13.2 l3.3 -13.2 l2.2 22.0Z" fill="#7FA65A" stroke="#5E8A3F" stroke-width="1.3" stroke-linejoin="round"/><path d="M52.3 748.0 l3.3 -15.4 l3.3 11.0 l3.3 -17.6 l3.3 13.2 l3.3 -13.2 l2.2 22.0Z" fill="#7FA65A" stroke="#5E8A3F" stroke-width="1.3" stroke-linejoin="round"/>
+        <g><circle cx="352" cy="635" r="4.4" fill="#fff" stroke="#3b2a20" stroke-width="1.2"/><circle cx="357" cy="638.5" r="4.4" fill="#fff" stroke="#3b2a20" stroke-width="1.2"/><circle cx="355" cy="644.5" r="4.4" fill="#fff" stroke="#3b2a20" stroke-width="1.2"/><circle cx="349" cy="644.5" r="4.4" fill="#fff" stroke="#3b2a20" stroke-width="1.2"/><circle cx="347" cy="638.5" r="4.4" fill="#fff" stroke="#3b2a20" stroke-width="1.2"/><circle cx="352" cy="640" r="3" fill="#F2C94C"/></g><g><circle cx="376" cy="695" r="4.4" fill="#F6B8B8" stroke="#3b2a20" stroke-width="1.2"/><circle cx="381" cy="698.5" r="4.4" fill="#F6B8B8" stroke="#3b2a20" stroke-width="1.2"/><circle cx="379" cy="704.5" r="4.4" fill="#F6B8B8" stroke="#3b2a20" stroke-width="1.2"/><circle cx="373" cy="704.5" r="4.4" fill="#F6B8B8" stroke="#3b2a20" stroke-width="1.2"/><circle cx="371" cy="698.5" r="4.4" fill="#F6B8B8" stroke="#3b2a20" stroke-width="1.2"/><circle cx="376" cy="700" r="3" fill="#F2C94C"/></g><g><circle cx="24" cy="665" r="4.4" fill="#A9CBE3" stroke="#3b2a20" stroke-width="1.2"/><circle cx="29" cy="668.5" r="4.4" fill="#A9CBE3" stroke="#3b2a20" stroke-width="1.2"/><circle cx="27" cy="674.5" r="4.4" fill="#A9CBE3" stroke="#3b2a20" stroke-width="1.2"/><circle cx="21" cy="674.5" r="4.4" fill="#A9CBE3" stroke="#3b2a20" stroke-width="1.2"/><circle cx="19" cy="668.5" r="4.4" fill="#A9CBE3" stroke="#3b2a20" stroke-width="1.2"/><circle cx="24" cy="670" r="3" fill="#F2C94C"/></g><g><circle cx="90" cy="707" r="4.4" fill="#fff" stroke="#3b2a20" stroke-width="1.2"/><circle cx="95" cy="710.5" r="4.4" fill="#fff" stroke="#3b2a20" stroke-width="1.2"/><circle cx="93" cy="716.5" r="4.4" fill="#fff" stroke="#3b2a20" stroke-width="1.2"/><circle cx="87" cy="716.5" r="4.4" fill="#fff" stroke="#3b2a20" stroke-width="1.2"/><circle cx="85" cy="710.5" r="4.4" fill="#fff" stroke="#3b2a20" stroke-width="1.2"/><circle cx="90" cy="712" r="3" fill="#F2C94C"/></g><g><circle cx="322" cy="737" r="4.4" fill="#F6B8B8" stroke="#3b2a20" stroke-width="1.2"/><circle cx="327" cy="740.5" r="4.4" fill="#F6B8B8" stroke="#3b2a20" stroke-width="1.2"/><circle cx="325" cy="746.5" r="4.4" fill="#F6B8B8" stroke="#3b2a20" stroke-width="1.2"/><circle cx="319" cy="746.5" r="4.4" fill="#F6B8B8" stroke="#3b2a20" stroke-width="1.2"/><circle cx="317" cy="740.5" r="4.4" fill="#F6B8B8" stroke="#3b2a20" stroke-width="1.2"/><circle cx="322" cy="742" r="3" fill="#F2C94C"/></g>
+        <!-- patinho e porquinho na frente -->
+        <g class="idle hopx"><g transform="translate(38 540) scale(.44)">
           <ellipse cx="56" cy="140" rx="12" ry="5" fill="#F39A3C" stroke="#a85a14" stroke-width="2.5"/>
           <ellipse cx="84" cy="140" rx="12" ry="5" fill="#F39A3C" stroke="#a85a14" stroke-width="2.5"/>
           <ellipse cx="70" cy="106" rx="38" ry="31" fill="#F7D046" stroke="#a07b2c" stroke-width="3"/>
@@ -393,14 +366,8 @@
           <circle cx="57" cy="54" r="5" fill="#2b1d14"/><circle cx="58.5" cy="52.5" r="1.7" fill="#fff"/>
           <circle cx="83" cy="54" r="5" fill="#2b1d14"/><circle cx="84.5" cy="52.5" r="1.7" fill="#fff"/>
           <circle cx="47" cy="66" r="5" fill="#F6A77B" opacity=".7"/><circle cx="93" cy="66" r="5" fill="#F6A77B" opacity=".7"/>
-        </svg>
-      </button>
-
-      <!-- PORQUINHO -->
-      <button class="animal" data-a="porco" data-open="confirmar" style="--d:1.0499999999999998s" aria-label="Porquinho">
-        <span class="bubble">Óinc óinc!</span>
-        <span class="sign2 go"><b>Confirmar</b><small>eu vou!</small></span>
-        <svg viewBox="0 0 140 150">
+        </g></g>
+        <g class="idle wag"><g transform="translate(290 568) scale(.52)">
           <path d="M110 100 q14 -6 10 6 q-6 6 -2 -4" stroke="#c9707f" stroke-width="3" fill="none" stroke-linecap="round"/>
           <g stroke="#c9707f" stroke-width="3" fill="#F7BFCB"><rect x="44" y="116" width="16" height="26" rx="6"/><rect x="80" y="116" width="16" height="26" rx="6"/></g>
           <rect x="45.5" y="133" width="13" height="8" rx="3" fill="#c9707f"/><rect x="81.5" y="133" width="13" height="8" rx="3" fill="#c9707f"/>
@@ -413,33 +380,252 @@
           <circle cx="56" cy="52" r="5" fill="#2b1d14"/><circle cx="57.5" cy="50.5" r="1.7" fill="#fff"/>
           <circle cx="84" cy="52" r="5" fill="#2b1d14"/><circle cx="85.5" cy="50.5" r="1.7" fill="#fff"/>
           <circle cx="44" cy="66" r="5" fill="#EE8FA3" opacity=".8"/><circle cx="96" cy="66" r="5" fill="#EE8FA3" opacity=".8"/>
+        </g></g>
         </svg>
+      <div class="hole">
+        <div class="glow"></div>
+        <div class="door l"></div><div class="door r"></div>
+        <div class="seam"></div>
+      </div>
+    </div>
+    <div class="cta"><span class="cta-in"><b>Você está convidado!</b><span class="cta-t">Toque na porta para entrar <svg class="ic"><use href="#i-down"/></svg></span></span></div>
+  </div>
+</div>
+
+<button class="sound" id="sound" aria-label="Ligar ou desligar a música"><svg class="ic"><use href="#i-sound"/></svg></button>
+<div class="toast" id="toast" role="status"></div>
+
+<main class="app">
+  
+  <!-- ===== TOPO: CENA DO BOLO ===== -->
+  <section class="hero">
+    <svg class="scene" id="scene" viewBox="0 14 400 354" role="img" aria-label="Topo de bolo de fazendinha: moinho, casinha azul, árvore, Joaquim de cowboy, ovelhinha e o número 2 xadrez">
+      <circle cx="340" cy="56" r="52" fill="#FFE08A" opacity=".15"/><circle cx="340" cy="56" r="41" fill="#FFE08A" opacity=".35"/><circle cx="340" cy="56" r="30" fill="#FFE08A"/>
+      <g class="cloud"><ellipse cx="82" cy="54" rx="40" ry="14" fill="#fff" stroke="#3b2a20" stroke-width="5"/><ellipse cx="68" cy="44" rx="20" ry="15" fill="#fff" stroke="#3b2a20" stroke-width="5"/><ellipse cx="94" cy="40" rx="22" ry="18" fill="#fff" stroke="#3b2a20" stroke-width="5"/><ellipse cx="82" cy="54" rx="40" ry="14" fill="#fff"/><ellipse cx="68" cy="44" rx="20" ry="15" fill="#fff"/><ellipse cx="94" cy="40" rx="22" ry="18" fill="#fff"/></g>
+      <g class="cloud b"><ellipse cx="246" cy="44" rx="30" ry="10" fill="#fff" stroke="#3b2a20" stroke-width="5"/><ellipse cx="256" cy="36" rx="16" ry="12" fill="#fff" stroke="#3b2a20" stroke-width="5"/><ellipse cx="246" cy="44" rx="30" ry="10" fill="#fff"/><ellipse cx="256" cy="36" rx="16" ry="12" fill="#fff"/></g>
+      <path d="M-10 236 Q80 180 190 214 T410 196 V330 H-10Z" fill="#B5CF96"/>
+      <path d="M-10 266 Q110 226 230 256 T410 248 V330 H-10Z" fill="#9DBF78"/>
+      <!-- árvore -->
+      <rect x="335" y="200" width="14" height="96" rx="3" fill="#8C5A33" stroke="#3b2a20" stroke-width="2.5" stroke-linejoin="round"/>
+      <g><circle cx="342" cy="186" r="36" fill="#7FAE5C" stroke="#3b2a20" stroke-width="5"/><circle cx="318" cy="208" r="24" fill="#6E9E4E" stroke="#3b2a20" stroke-width="5"/><circle cx="366" cy="210" r="24" fill="#6E9E4E" stroke="#3b2a20" stroke-width="5"/><circle cx="344" cy="160" r="26" fill="#8DBD68" stroke="#3b2a20" stroke-width="5"/><circle cx="342" cy="186" r="36" fill="#7FAE5C"/><circle cx="318" cy="208" r="24" fill="#6E9E4E"/><circle cx="366" cy="210" r="24" fill="#6E9E4E"/><circle cx="344" cy="160" r="26" fill="#8DBD68"/></g>
+      <!-- moinho -->
+      <path d="M36 290 L47 160 H69 L80 290Z" fill="#D8D2C6" stroke="#3b2a20" stroke-width="2.5" stroke-linejoin="round"/>
+      <path d="M50 196 h10 M60 226 h10 M47 258 h10" stroke="#a39a89" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M44 162 L58 142 L72 162Z" fill="#8C5A33" stroke="#3b2a20" stroke-width="2.5" stroke-linejoin="round"/>
+      <g transform="translate(58 146)">
+        <g class="blades">
+          <g fill="#F2D57E" stroke="#3b2a20" stroke-width="2">
+            <rect x="-6" y="-54" width="12" height="48" rx="2"/><rect x="-6" y="6" width="12" height="48" rx="2"/>
+            <rect x="-54" y="-6" width="48" height="12" rx="2"/><rect x="6" y="-6" width="48" height="12" rx="2"/>
+          </g>
+          <path d="M0 -52 V-8 M0 8 V52 M-52 0 H-8 M8 0 H52" stroke="#a07b2c" stroke-width="1.5"/>
+          <circle r="6.5" fill="#7E5230" stroke="#3b2a20" stroke-width="2"/>
+        </g>
+      </g>
+      <!-- casinha azul (atrás do Joaquim) -->
+      <rect x="258" y="124" width="16" height="38" fill="#A86F3F" stroke="#3b2a20" stroke-width="2.5" stroke-linejoin="round"/>
+      <rect x="172" y="186" width="118" height="106" fill="#A9CBE3" stroke="#4E7CA8" stroke-width="3"/>
+      <path d="M172 206 H290 M172 226 H290 M172 246 H290 M172 266 H290" stroke="#93b9d6" stroke-width="2"/>
+      <rect x="260" y="212" width="20" height="22" rx="2" fill="#FBF6EA" stroke="#4E7CA8" stroke-width="2.5"/><path d="M270 212 v22 M260 223 h20" stroke="#4E7CA8" stroke-width="2"/>
+      <path d="M160 192 L231 122 L302 192Z" fill="#8C5A33" stroke="#3b2a20" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M172 188 L231 130 L290 188" fill="none" stroke="#B07A4B" stroke-width="3"/>
+      <!-- gramado -->
+      <defs><linearGradient id="gM1" gradientUnits="userSpaceOnUse" x1="0" y1="300" x2="0" y2="372"><stop offset=".45" stop-color="#9DBF78"/><stop offset="1" stop-color="#9DBF78" stop-opacity="0"/></linearGradient><linearGradient id="gM2" gradientUnits="userSpaceOnUse" x1="0" y1="316" x2="0" y2="372"><stop offset=".35" stop-color="#8DB86A"/><stop offset="1" stop-color="#8DB86A" stop-opacity="0"/></linearGradient></defs>
+      <path d="M-10 296 Q60 284 130 292 T260 290 T410 288 V372 H-10Z" fill="url(#gM1)"/>
+      <path d="M-10 296 Q60 284 130 292 T260 290 T410 288" fill="none" stroke="#5E8A3F" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M-10 322 Q120 310 230 318 T410 314 V372 H-10Z" fill="url(#gM2)"/>
+      <path d="M13.7 300.0 l2.7 -12.6 l2.7 9.0 l2.7 -14.4 l2.7 10.8 l2.7 -10.8 l1.8 18.0Z" fill="#7FA65A" stroke="#5E8A3F" stroke-width="1.3" stroke-linejoin="round"/><path d="M106.4 304.0 l2.4 -11.2 l2.4 8.0 l2.4 -12.8 l2.4 9.6 l2.4 -9.6 l1.6 16.0Z" fill="#7FA65A" stroke="#5E8A3F" stroke-width="1.3" stroke-linejoin="round"/><path d="M159.0 306.0 l3.0 -14.0 l3.0 10.0 l3.0 -16.0 l3.0 12.0 l3.0 -12.0 l2.0 20.0Z" fill="#7FA65A" stroke="#5E8A3F" stroke-width="1.3" stroke-linejoin="round"/><path d="M250.1 304.0 l2.5 -11.9 l2.5 8.5 l2.5 -13.6 l2.5 10.2 l2.5 -10.2 l1.7 17.0Z" fill="#7FA65A" stroke="#5E8A3F" stroke-width="1.3" stroke-linejoin="round"/><path d="M293.7 306.0 l2.7 -12.6 l2.7 9.0 l2.7 -14.4 l2.7 10.8 l2.7 -10.8 l1.8 18.0Z" fill="#7FA65A" stroke="#5E8A3F" stroke-width="1.3" stroke-linejoin="round"/><path d="M382.4 300.0 l2.4 -11.2 l2.4 8.0 l2.4 -12.8 l2.4 9.6 l2.4 -9.6 l1.6 16.0Z" fill="#7FA65A" stroke="#5E8A3F" stroke-width="1.3" stroke-linejoin="round"/><path d="M53.0 336.0 l3.0 -14.0 l3.0 10.0 l3.0 -16.0 l3.0 12.0 l3.0 -12.0 l2.0 20.0Z" fill="#7FA65A" stroke="#5E8A3F" stroke-width="1.3" stroke-linejoin="round"/><path d="M207.7 344.0 l2.7 -12.6 l2.7 9.0 l2.7 -14.4 l2.7 10.8 l2.7 -10.8 l1.8 18.0Z" fill="#7FA65A" stroke="#5E8A3F" stroke-width="1.3" stroke-linejoin="round"/><path d="M345.0 340.0 l3.0 -14.0 l3.0 10.0 l3.0 -16.0 l3.0 12.0 l3.0 -12.0 l2.0 20.0Z" fill="#7FA65A" stroke="#5E8A3F" stroke-width="1.3" stroke-linejoin="round"/><circle cx="140" cy="324" r="3.6" fill="#fff" stroke="#3b2a20" stroke-width="1"/><circle cx="144" cy="326.8" r="3.6" fill="#fff" stroke="#3b2a20" stroke-width="1"/><circle cx="142.5" cy="331.6" r="3.6" fill="#fff" stroke="#3b2a20" stroke-width="1"/><circle cx="137.5" cy="331.6" r="3.6" fill="#fff" stroke="#3b2a20" stroke-width="1"/><circle cx="136" cy="326.8" r="3.6" fill="#fff" stroke="#3b2a20" stroke-width="1"/><circle cx="140" cy="328" r="2.4" fill="#F2C94C"/><circle cx="240" cy="326" r="3.6" fill="#F6B8B8" stroke="#3b2a20" stroke-width="1"/><circle cx="244" cy="328.8" r="3.6" fill="#F6B8B8" stroke="#3b2a20" stroke-width="1"/><circle cx="242.5" cy="333.6" r="3.6" fill="#F6B8B8" stroke="#3b2a20" stroke-width="1"/><circle cx="237.5" cy="333.6" r="3.6" fill="#F6B8B8" stroke="#3b2a20" stroke-width="1"/><circle cx="236" cy="328.8" r="3.6" fill="#F6B8B8" stroke="#3b2a20" stroke-width="1"/><circle cx="240" cy="330" r="2.4" fill="#F2C94C"/><circle cx="34" cy="346" r="3.6" fill="#fff" stroke="#3b2a20" stroke-width="1"/><circle cx="38" cy="348.8" r="3.6" fill="#fff" stroke="#3b2a20" stroke-width="1"/><circle cx="36.5" cy="353.6" r="3.6" fill="#fff" stroke="#3b2a20" stroke-width="1"/><circle cx="31.5" cy="353.6" r="3.6" fill="#fff" stroke="#3b2a20" stroke-width="1"/><circle cx="30" cy="348.8" r="3.6" fill="#fff" stroke="#3b2a20" stroke-width="1"/><circle cx="34" cy="350" r="2.4" fill="#F2C94C"/><circle cx="300" cy="348" r="3.6" fill="#A9CBE3" stroke="#3b2a20" stroke-width="1"/><circle cx="304" cy="350.8" r="3.6" fill="#A9CBE3" stroke="#3b2a20" stroke-width="1"/><circle cx="302.5" cy="355.6" r="3.6" fill="#A9CBE3" stroke="#3b2a20" stroke-width="1"/><circle cx="297.5" cy="355.6" r="3.6" fill="#A9CBE3" stroke="#3b2a20" stroke-width="1"/><circle cx="296" cy="350.8" r="3.6" fill="#A9CBE3" stroke="#3b2a20" stroke-width="1"/><circle cx="300" cy="352" r="2.4" fill="#F2C94C"/>
+
+      <!-- ovelhinha -->
+      <g transform="translate(50 252) scale(.52)"><g stroke="#3b2a20" stroke-width="3" stroke-linejoin="round"><rect x="50" y="112" width="13" height="30" rx="5" fill="#5a4e47"/><rect x="79" y="112" width="13" height="30" rx="5" fill="#5a4e47"/></g><circle cx="44" cy="100" r="18" fill="#FFFFFF" stroke="#3b2a20" stroke-width="5"/><circle cx="60" cy="86" r="20" fill="#FFFFFF" stroke="#3b2a20" stroke-width="5"/><circle cx="84" cy="86" r="20" fill="#FFFFFF" stroke="#3b2a20" stroke-width="5"/><circle cx="100" cy="100" r="18" fill="#FFFFFF" stroke="#3b2a20" stroke-width="5"/><circle cx="88" cy="118" r="18" fill="#FFFFFF" stroke="#3b2a20" stroke-width="5"/><circle cx="56" cy="118" r="18" fill="#FFFFFF" stroke="#3b2a20" stroke-width="5"/><circle cx="72" cy="104" r="24" fill="#FFFFFF" stroke="#3b2a20" stroke-width="5"/><circle cx="44" cy="100" r="18" fill="#FFFFFF"/><circle cx="60" cy="86" r="20" fill="#FFFFFF"/><circle cx="84" cy="86" r="20" fill="#FFFFFF"/><circle cx="100" cy="100" r="18" fill="#FFFFFF"/><circle cx="88" cy="118" r="18" fill="#FFFFFF"/><circle cx="56" cy="118" r="18" fill="#FFFFFF"/><circle cx="72" cy="104" r="24" fill="#FFFFFF"/><circle cx="66" cy="96" r="7" fill="#F1ECE4"/><circle cx="90" cy="108" r="6" fill="#F1ECE4"/><circle cx="52" cy="110" r="5" fill="#F1ECE4"/><g stroke="#3b2a20" stroke-width="3" stroke-linejoin="round"><ellipse cx="42" cy="62" rx="14" ry="7" transform="rotate(-22 42 62)" fill="#E9CDB8"/><ellipse cx="102" cy="62" rx="14" ry="7" transform="rotate(22 102 62)" fill="#E9CDB8"/><ellipse cx="72" cy="64" rx="25" ry="24" fill="#F6E6D6"/></g><circle cx="60" cy="42" r="9" fill="#FFFFFF" stroke="#3b2a20" stroke-width="5"/><circle cx="72" cy="37" r="10" fill="#FFFFFF" stroke="#3b2a20" stroke-width="5"/><circle cx="84" cy="42" r="9" fill="#FFFFFF" stroke="#3b2a20" stroke-width="5"/><circle cx="60" cy="42" r="9" fill="#FFFFFF"/><circle cx="72" cy="37" r="10" fill="#FFFFFF"/><circle cx="84" cy="42" r="9" fill="#FFFFFF"/><circle cx="62" cy="64" r="4.6" fill="#2b1d14"/><circle cx="63.6" cy="62.4" r="1.6" fill="#fff"/><circle cx="82" cy="64" r="4.6" fill="#2b1d14"/><circle cx="83.6" cy="62.4" r="1.6" fill="#fff"/><path d="M68 75 q4 4 8 0" stroke="#3b2a20" stroke-width="2.4" fill="none" stroke-linecap="round"/><circle cx="54" cy="73" r="4.5" fill="#F4B6AE" opacity=".8"/><circle cx="90" cy="73" r="4.5" fill="#F4B6AE" opacity=".8"/></g>
+      <!-- Joaquim cowboy -->
+      <g transform="translate(116 86) scale(.73)">
+  <defs>
+    <pattern id="xad2" width="9" height="9" patternUnits="userSpaceOnUse">
+      <rect width="9" height="9" fill="#EEF5FB"/><rect width="9" height="4.5" fill="#8DB6D9" opacity=".6"/><rect width="4.5" height="9" fill="#8DB6D9" opacity=".6"/>
+    </pattern>
+  </defs>
+  <g stroke="#3b2a20" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+    <!-- botas -->
+    <path d="M62 262 H98 V280 Q98 290 88 290 H56 Q48 290 51 281 Q54 272 62 272Z" fill="#8C5A33"/>
+    <path d="M102 262 H138 V272 Q146 272 149 281 Q152 290 144 290 H112 Q102 290 102 280Z" fill="#8C5A33"/>
+    <!-- calça da jardineira -->
+    <path d="M60 212 H140 L138 264 H104 L100 242 L96 264 H62 Z" fill="#6E9CC9"/>
+    <!-- braço esquerdo (abaixado) -->
+    <path d="M68 168 Q46 184 46 214 L60 217 Q62 196 76 182 Z" fill="url(#xad2)"/>
+    <circle cx="53" cy="222" r="10" fill="#E8B48C"/>
+    <!-- braço direito (acenando) -->
+    <g class="wave"><path d="M132 168 Q162 160 174 132 L161 125 Q152 150 124 160 Z" fill="url(#xad2)"/>
+    <path d="M161 125 q-6 -12 2 -18 q2 -8 9 -4 q6 -4 9 3 q7 1 4 10 q2 9 -8 13 q-10 3 -16 -4z" fill="#E8B48C"/></g>
+    <!-- camisa xadrez -->
+    <path d="M64 168 Q100 150 136 168 L141 220 H59 Z" fill="url(#xad2)"/>
+    <!-- peito da jardineira -->
+    <rect x="73" y="180" width="54" height="40" rx="7" fill="#6E9CC9"/>
+    <path d="M74 182 L66 166 M126 182 L134 166" stroke="#5F8DBA" stroke-width="7"/>
+    <rect x="88" y="192" width="24" height="15" rx="3" fill="none" stroke="#4E7CA8" stroke-width="2" stroke-dasharray="3 3"/>
+    <circle cx="80" cy="186" r="3.6" fill="#F2D57E" stroke-width="2"/>
+    <circle cx="120" cy="186" r="3.6" fill="#F2D57E" stroke-width="2"/>
+    <!-- gola -->
+    <path d="M84 158 L100 172 L116 158" fill="#fff"/>
+    <path d="M46 118 C38 92 50 70 74 66 L126 66 C150 70 162 92 154 118 C150 104 146 98 140 96 L60 96 C54 98 50 104 46 118Z" fill="#5A3A22"/>
+    <!-- orelhas e cabeça -->
+    <circle cx="51" cy="116" r="9" fill="#E8B48C"/>
+    <circle cx="149" cy="116" r="9" fill="#E8B48C"/>
+    <ellipse cx="100" cy="114" rx="50" ry="46" fill="#E8B48C"/>
+  </g>
+  <!-- cabelo castanho bagunçadinho -->
+  <path d="M51 104 C50 80 64 76 72 84 C74 74 88 74 91 86 C95 74 108 74 111 86 C115 74 128 76 130 86 C138 78 152 82 150 102 C142 92 134 94 130 98 C124 88 114 90 110 98 C104 88 94 88 90 98 C84 88 74 90 70 98 C64 94 56 98 51 104Z" fill="#5A3A22" stroke="#3b2a20" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M52 98 q-3 12 1 22 M148 98 q3 12 -1 22" stroke="#5A3A22" stroke-width="7" stroke-linecap="round"/>
+  <!-- rosto -->
+  <path d="M71 101 q8 -5 15 0 M114 101 q8 -5 15 0" stroke="#5A3A22" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <ellipse cx="80" cy="114" rx="6.5" ry="8" fill="#2b1d14"/><circle cx="82.5" cy="110.5" r="2.5" fill="#fff"/>
+  <ellipse cx="120" cy="114" rx="6.5" ry="8" fill="#2b1d14"/><circle cx="122.5" cy="110.5" r="2.5" fill="#fff"/>
+  <path d="M96 125 q4 3 8 0" stroke="#b07a55" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M85 133 Q100 153 115 133 Q100 139 85 133Z" fill="#A8443B" stroke="#3b2a20" stroke-width="2.5" stroke-linejoin="round"/>
+  
+  <ellipse cx="100" cy="142.5" rx="6" ry="3" fill="#EE8F84"/>
+  <ellipse cx="65" cy="131" rx="8" ry="5" fill="#EE9C8A" opacity=".6"/>
+  <ellipse cx="135" cy="131" rx="8" ry="5" fill="#EE9C8A" opacity=".6"/>
+  <!-- chapéu de cowboy -->
+  <g stroke="#5c3a1e" stroke-width="3" stroke-linejoin="round" transform="rotate(-6 100 70)">
+    <path d="M60 68 C58 30 72 18 87 27 C93 18 107 18 113 27 C128 18 142 30 140 68 Z" fill="#A86F3F"/>
+    <path d="M61 56 Q100 64 139 56 L140 68 Q100 76 60 68 Z" fill="#5c3a1e"/>
+    <path d="M16 70 C28 94 70 86 100 86 C130 86 172 94 184 70 C174 64 158 76 145 68 C120 78 80 78 55 68 C42 76 26 64 16 70 Z" fill="#C08552"/>
+  </g>
+</g>
+      <!-- número 2 -->
+      <g transform="rotate(7 330 260)">
+        <text x="332" y="326" text-anchor="middle" font-family="'Baloo 2',sans-serif" font-weight="800" font-size="176" fill="#fff" stroke="#fff" stroke-width="18" stroke-linejoin="round">2</text>
+        <text x="332" y="326" text-anchor="middle" font-family="'Baloo 2',sans-serif" font-weight="800" font-size="176" fill="url(#xad)" stroke="#5f86ad" stroke-width="3.5" stroke-linejoin="round">2</text>
+      </g>
+      <g fill="#7FA65A" stroke="#5E8A3F" stroke-width="1.5" stroke-linejoin="round"><path d="M22 314 l5 -20 l4 16 l6 -14 l3 18Z"/><path d="M262 330 l4 -18 l4 14 l5 -12 l2 16Z"/><path d="M118 336 l4 -14 l4 11 l4 -9 l2 12Z"/></g>
+    </svg>
+
+    <div class="plank"><i class="nail a"></i><i class="nail b"></i><h1>Joaquim</h1></div>
+    <div><span class="age">faz 2 aninhos!</span></div>
+    <p class="phrase">A bicharada já está avisada… e você é nosso convidado especial!</p>
+    <div class="when-chip"><svg class="ic"><use href="#i-cal"/></svg>Sáb, 12/12<i></i><svg class="ic"><use href="#i-clock"/></svg>19h</div>
+  </section>
+
+  <!-- ===== FAZENDINHA COM BICHINHOS ===== -->
+  <section class="farm">
+    <svg class="land" viewBox="0 0 400 262" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+      <defs>
+        <pattern id="cerca" width="34" height="80" patternUnits="userSpaceOnUse">
+          <path d="M8 20 L17 9 L26 20 V80 H8Z" fill="#C08A5A" stroke="#7E5230" stroke-width="2.5"/>
+        </pattern>
+      </defs>
+      <g>
+        <path d="M-10 110 Q100 70 210 102 T410 88 V262 H-10Z" fill="#B5CF96"/>
+        <path d="M-10 150 Q120 112 250 140 T410 130 V262 H-10Z" fill="#9DBF78"/>
+        <rect x="-4" y="176" width="410" height="9" fill="#C08A5A" stroke="#7E5230" stroke-width="2"/>
+        <rect x="-4" y="204" width="410" height="9" fill="#C08A5A" stroke="#7E5230" stroke-width="2"/>
+        <rect x="-4" y="158" width="414" height="80" fill="url(#cerca)"/>
+        <path d="M-10 228 Q200 212 410 228 V262 H-10Z" fill="#7FA65A"/>
+      </g>
+    </svg>
+    <div class="animals">
+      <button class="animal" data-a="vaca" data-open="quando" style="--d:0s" aria-label="Vaquinha: quando é a festa">
+        <span class="bubble">Muuuu!</span>
+        <span class="sign"><b>Quando</b><small>12/12 · 19h</small></span>
+        <svg class="art" viewBox="0 0 140 150" aria-hidden="true"><g>
+          <g stroke="#3b2a20" stroke-width="3"><rect x="44" y="116" width="16" height="26" rx="6" fill="#fff"/><rect x="80" y="116" width="16" height="26" rx="6" fill="#fff"/></g>
+          <rect x="45.5" y="133" width="13" height="8" rx="3" fill="#3b2a20"/><rect x="81.5" y="133" width="13" height="8" rx="3" fill="#3b2a20"/>
+          <path d="M110 100 q16 -4 14 14" stroke="#3b2a20" stroke-width="3" fill="none"/>
+          <ellipse cx="70" cy="106" rx="42" ry="28" fill="#fff" stroke="#3b2a20" stroke-width="3"/>
+          <path d="M40 98 q10 -12 22 -4 q6 10 -6 16 q-12 4 -16 -12z" fill="#2b2b2b"/>
+          <path d="M86 112 q8 -10 18 -2 q4 10 -8 12 q-10 2 -10 -10z" fill="#2b2b2b"/>
+          <path d="M48 32 q-8 -12 0 -18 q3 9 10 13z" fill="#F3E3C3" stroke="#3b2a20" stroke-width="2.5"/>
+          <path d="M92 32 q8 -12 0 -18 q-3 9 -10 13z" fill="#F3E3C3" stroke="#3b2a20" stroke-width="2.5"/>
+          <ellipse cx="30" cy="50" rx="16" ry="8" transform="rotate(-18 30 50)" fill="#fff" stroke="#3b2a20" stroke-width="3"/>
+          <ellipse cx="31" cy="50" rx="8" ry="4" transform="rotate(-18 31 50)" fill="#F6B8B8"/>
+          <ellipse cx="110" cy="50" rx="16" ry="8" transform="rotate(18 110 50)" fill="#fff" stroke="#3b2a20" stroke-width="3"/>
+          <ellipse cx="109" cy="50" rx="8" ry="4" transform="rotate(18 109 50)" fill="#F6B8B8"/>
+          <ellipse cx="70" cy="58" rx="36" ry="32" fill="#fff" stroke="#3b2a20" stroke-width="3"/>
+          <path d="M80 30 q14 2 16 16 q-8 8 -18 0 q-6 -10 2 -16z" fill="#2b2b2b"/>
+          <ellipse cx="70" cy="77" rx="25" ry="15" fill="#F6B8B8" stroke="#3b2a20" stroke-width="3"/>
+          <ellipse cx="61" cy="76" rx="3.5" ry="4.5" fill="#9a5555"/><ellipse cx="79" cy="76" rx="3.5" ry="4.5" fill="#9a5555"/>
+          <circle cx="55" cy="52" r="5" fill="#2b1d14"/><circle cx="56.5" cy="50.5" r="1.7" fill="#fff"/>
+          <circle cx="85" cy="52" r="5" fill="#2b1d14"/><circle cx="86.5" cy="50.5" r="1.7" fill="#fff"/>
+          <circle cx="44" cy="64" r="5" fill="#F6B8B8" opacity=".8"/><circle cx="96" cy="64" r="5" fill="#F6B8B8" opacity=".8"/>
+        </g></svg>
+      </button>
+      <button class="animal" data-a="cavalo" data-open="onde" style="--d:.35s" aria-label="Cavalinho: onde é a festa">
+        <span class="bubble">Hiiiiin!</span>
+        <span class="sign"><b>Onde</b><small>endereço</small></span>
+        <svg class="art" viewBox="0 0 140 150" aria-hidden="true"><g>
+          <path d="M108 96 q22 6 14 34 q-10 -4 -10 -18z" fill="#8B5A2B" stroke="#5c3a1e" stroke-width="2.5"/>
+          <g stroke="#5c3a1e" stroke-width="3" fill="#D9A066"><rect x="44" y="116" width="16" height="26" rx="6"/><rect x="80" y="116" width="16" height="26" rx="6"/></g>
+          <rect x="45.5" y="133" width="13" height="8" rx="3" fill="#5c3a1e"/><rect x="81.5" y="133" width="13" height="8" rx="3" fill="#5c3a1e"/>
+          <ellipse cx="70" cy="106" rx="42" ry="27" fill="#D9A066" stroke="#5c3a1e" stroke-width="3"/>
+          <path d="M42 30 L46 6 L60 24Z" fill="#D9A066" stroke="#5c3a1e" stroke-width="3" stroke-linejoin="round"/>
+          <path d="M98 30 L94 6 L80 24Z" fill="#D9A066" stroke="#5c3a1e" stroke-width="3" stroke-linejoin="round"/>
+          <ellipse cx="70" cy="60" rx="31" ry="36" fill="#D9A066" stroke="#5c3a1e" stroke-width="3"/>
+          <ellipse cx="70" cy="48" rx="5" ry="11" fill="#FBEBD0"/>
+          <path d="M50 30 q4 -16 18 -10 q8 -12 20 2 q-2 10 -12 8 q-10 6 -14 0 q-8 6 -12 0z" fill="#8B5A2B" stroke="#5c3a1e" stroke-width="2.5" stroke-linejoin="round"/>
+          <ellipse cx="70" cy="82" rx="23" ry="16" fill="#F0CD9B" stroke="#5c3a1e" stroke-width="3"/>
+          <ellipse cx="62" cy="81" rx="3" ry="4" fill="#7a4a2a"/><ellipse cx="78" cy="81" rx="3" ry="4" fill="#7a4a2a"/>
+          <circle cx="56" cy="56" r="5" fill="#2b1d14"/><circle cx="57.5" cy="54.5" r="1.7" fill="#fff"/>
+          <circle cx="84" cy="56" r="5" fill="#2b1d14"/><circle cx="85.5" cy="54.5" r="1.7" fill="#fff"/>
+          <circle cx="46" cy="68" r="5" fill="#F0A58E" opacity=".8"/><circle cx="94" cy="68" r="5" fill="#F0A58E" opacity=".8"/>
+        </g></svg>
+      </button>
+      <button class="animal" data-a="pato" data-open="presente" style="--d:.7s" aria-label="Patinho: sugestão de presente">
+        <span class="bubble">Quá quá!</span>
+        <span class="sign"><b>Presente</b><small>sugestão</small></span>
+        <svg class="art" viewBox="0 0 140 150" aria-hidden="true"><g>
+          <ellipse cx="56" cy="140" rx="12" ry="5" fill="#F39A3C" stroke="#a85a14" stroke-width="2.5"/>
+          <ellipse cx="84" cy="140" rx="12" ry="5" fill="#F39A3C" stroke="#a85a14" stroke-width="2.5"/>
+          <ellipse cx="70" cy="106" rx="38" ry="31" fill="#F7D046" stroke="#a07b2c" stroke-width="3"/>
+          <ellipse cx="98" cy="104" rx="12" ry="18" transform="rotate(-20 98 104)" fill="#F0C02E" stroke="#a07b2c" stroke-width="2.5"/>
+          <ellipse cx="42" cy="104" rx="12" ry="18" transform="rotate(20 42 104)" fill="#F0C02E" stroke="#a07b2c" stroke-width="2.5"/>
+          <circle cx="70" cy="58" r="31" fill="#F7D046" stroke="#a07b2c" stroke-width="3"/>
+          <path d="M66 28 q-2 -14 8 -16 q-4 8 2 14 q4 -8 10 -6 q-6 4 -6 10" fill="#F7D046" stroke="#a07b2c" stroke-width="2.5" stroke-linejoin="round"/>
+          <ellipse cx="70" cy="72" rx="17" ry="8" fill="#F39A3C" stroke="#a85a14" stroke-width="2.5"/>
+          <path d="M55 72 q15 5 30 0" stroke="#a85a14" stroke-width="2" fill="none"/>
+          <circle cx="57" cy="54" r="5" fill="#2b1d14"/><circle cx="58.5" cy="52.5" r="1.7" fill="#fff"/>
+          <circle cx="83" cy="54" r="5" fill="#2b1d14"/><circle cx="84.5" cy="52.5" r="1.7" fill="#fff"/>
+          <circle cx="47" cy="66" r="5" fill="#F6A77B" opacity=".7"/><circle cx="93" cy="66" r="5" fill="#F6A77B" opacity=".7"/>
+        </g></svg>
+      </button>
+      <button class="animal" data-a="porco" data-open="confirmar" style="--d:1.05s" aria-label="Porquinho: confirmar presença">
+        <span class="bubble">Óinc óinc!</span>
+        <span class="sign go"><b>Confirmar</b><small>eu vou!</small></span>
+        <svg class="art" viewBox="0 0 140 150" aria-hidden="true"><g>
+          <path d="M110 100 q14 -6 10 6 q-6 6 -2 -4" stroke="#c9707f" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <g stroke="#c9707f" stroke-width="3" fill="#F7BFCB"><rect x="44" y="116" width="16" height="26" rx="6"/><rect x="80" y="116" width="16" height="26" rx="6"/></g>
+          <rect x="45.5" y="133" width="13" height="8" rx="3" fill="#c9707f"/><rect x="81.5" y="133" width="13" height="8" rx="3" fill="#c9707f"/>
+          <ellipse cx="70" cy="106" rx="42" ry="28" fill="#F7BFCB" stroke="#c9707f" stroke-width="3"/>
+          <path d="M38 40 L36 12 L60 28Z" fill="#F7BFCB" stroke="#c9707f" stroke-width="3" stroke-linejoin="round"/>
+          <path d="M102 40 L104 12 L80 28Z" fill="#F7BFCB" stroke="#c9707f" stroke-width="3" stroke-linejoin="round"/>
+          <circle cx="70" cy="60" r="34" fill="#F7BFCB" stroke="#c9707f" stroke-width="3"/>
+          <ellipse cx="70" cy="74" rx="17" ry="12" fill="#EE9DB0" stroke="#c9707f" stroke-width="3"/>
+          <ellipse cx="64" cy="74" rx="3" ry="4.5" fill="#a5465b"/><ellipse cx="76" cy="74" rx="3" ry="4.5" fill="#a5465b"/>
+          <circle cx="56" cy="52" r="5" fill="#2b1d14"/><circle cx="57.5" cy="50.5" r="1.7" fill="#fff"/>
+          <circle cx="84" cy="52" r="5" fill="#2b1d14"/><circle cx="85.5" cy="50.5" r="1.7" fill="#fff"/>
+          <circle cx="44" cy="66" r="5" fill="#EE8FA3" opacity=".8"/><circle cx="96" cy="66" r="5" fill="#EE8FA3" opacity=".8"/>
+        </g></svg>
       </button>
     </div>
   </section>
 
-  <!-- ===== MENU ===== -->
-  <section class="ground">
-    <div class="hint"><svg class="arr" viewBox="0 0 24 30" aria-hidden="true"><path d="M12 3 L22 15 H16 V27 H8 V15 H2 Z" fill="#fff" stroke="#7E5230" stroke-width="2.5" stroke-linejoin="round"/></svg><span>Toque nos bichinhos<br><small>para ver os detalhes da festa!</small></span><svg class="arr" viewBox="0 0 24 30" aria-hidden="true"><path d="M12 3 L22 15 H16 V27 H8 V15 H2 Z" fill="#fff" stroke="#7E5230" stroke-width="2.5" stroke-linejoin="round"/></svg></div>
+  <section class="below">
+    <div class="hint"><svg class="ic"><use href="#i-up"/></svg><span>Toque nos bichinhos<small>para ver os detalhes da festa</small></span><svg class="ic"><use href="#i-up"/></svg></div>
     <footer><span class="nm">Esperamos por você!</span></footer>
   </section>
 </main>
 
-<!-- ===== JANELA (abre ao tocar nos botões) ===== -->
+<!-- ===== JANELA DE DETALHES ===== -->
 <div class="sheet-bg" id="sheet-bg"></div>
 <div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-label="Detalhes do convite">
-  <div class="grab"></div>
-  <button class="close" id="close" aria-label="Fechar">✕</button>
+    <div class="grab"></div>
+  <button class="close" id="close" aria-label="Fechar"><svg class="ic"><use href="#i-x"/></svg></button>
 
   <section data-s="quando">
-    <h2>📅 Quando</h2>
+    <h2><svg class="ic"><use href="#i-cal"/></svg>Quando</h2>
     <div class="when">
       <div class="cal"><b>DEZEMBRO</b><strong>12</strong><span>sábado</span></div>
-      <div class="info">
-        <span>Sábado</span>
-        <span class="big">às 19h</span>
-        <span>Vem com fome e muita alegria! 🎉</span>
-      </div>
+      <div class="info"><span>Sábado</span><span class="big">às 19h</span><span>Vem com fome e muita alegria!</span></div>
     </div>
     <div class="count" id="count">
       <div><b id="cd-d">--</b><small>dias</small></div>
@@ -448,82 +634,71 @@
       <div><b id="cd-s">--</b><small>seg</small></div>
     </div>
     <p class="count-msg" id="count-msg" hidden></p>
-    <a class="btn full" id="gcal" target="_blank" rel="noopener">🗓️ Salvar na agenda</a>
+    <a class="btn full" id="gcal" target="_blank" rel="noopener"><svg class="ic"><use href="#i-save"/></svg>Salvar na agenda</a>
   </section>
 
   <section data-s="onde">
-    <h2>📍 Onde</h2>
+    <h2><svg class="ic"><use href="#i-pin"/></svg>Onde</h2>
     <p class="addr"><b>Rua Mirian Abreu, 230</b><br>Eusébio – CE</p>
-    <a class="map" id="map" target="_blank" rel="noopener" aria-label="Abrir o local no Google Maps">
-      <svg viewBox="0 0 320 190" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-        <rect width="320" height="190" fill="#E7EFD9"/>
-        <path d="M0 40 L320 70 M0 150 L320 120 M90 0 L120 190 M230 0 L210 190" stroke="#fff" stroke-width="16"/>
-        <path d="M0 40 L320 70 M0 150 L320 120 M90 0 L120 190 M230 0 L210 190" stroke="#d8e2c6" stroke-width="2" stroke-dasharray="8 8"/>
-        <circle cx="40" cy="95" r="18" fill="#BFD6A3"/><circle cx="280" cy="30" r="14" fill="#BFD6A3"/><circle cx="270" cy="165" r="16" fill="#BFD6A3"/>
-        <rect x="140" y="20" width="44" height="30" rx="4" fill="#d9e4f0"/><rect x="250" y="88" width="36" height="22" rx="4" fill="#d9e4f0"/><rect x="20" y="160" width="50" height="22" rx="4" fill="#d9e4f0"/>
-        <ellipse cx="166" cy="118" rx="16" ry="5" fill="rgba(0,0,0,.18)"/>
-        <g class="pin"><path d="M166 116 S146 92 146 78 a20 20 0 0 1 40 0 c0 14 -20 38 -20 38z" fill="#E36F5A" stroke="#3b2a20" stroke-width="3"/><circle cx="166" cy="78" r="8" fill="#fff" stroke="#3b2a20" stroke-width="3"/></g>
-      </svg>
-      <span class="map-tag">Toque para abrir no mapa</span>
-    </a>
+    <div class="map"><iframe id="map" title="Mapa do local da festa" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
     <div class="row">
-      <a class="btn" id="gmaps" target="_blank" rel="noopener">🗺️ Google Maps</a>
-      <a class="btn blue" id="waze" target="_blank" rel="noopener">🚗 Waze</a>
+      <a class="btn" id="gmaps" target="_blank" rel="noopener"><svg class="ic"><use href="#i-map"/></svg>Google Maps</a>
+      <a class="btn blue" id="waze" target="_blank" rel="noopener"><svg class="ic"><use href="#i-car"/></svg>Waze</a>
     </div>
   </section>
 
   <section data-s="presente">
-    <h2>🎁 Sugestão de presente</h2>
+    <h2><svg class="ic"><use href="#i-gift"/></svg>Sugestão de presente</h2>
     <div class="gifts">
-      <div class="gift"><div class="ico">👕</div><b>Roupinhas</b><span>4 / 5 anos</span></div>
-      <div class="gift"><div class="ico">👟</div><b>Calçado</b><span>24 / 25</span></div>
+      <div class="gift"><svg class="ic"><use href="#i-shirt"/></svg><b>Roupinhas</b><span>4 / 5 anos</span></div>
+      <div class="gift"><svg class="ic"><use href="#i-shoe"/></svg><b>Calçado</b><span>24 / 25</span></div>
     </div>
-    <p class="note">É apenas uma sugestão, viu? 😊<br>O presente mais especial é a <b>sua presença</b>! 💚</p>
+    <p class="note">É apenas uma sugestão, viu?<br>O presente mais especial é a <b>sua presença</b>!</p>
   </section>
 
   <section data-s="confirmar" class="rsvp">
-    <h2>✅ Confirme sua presença</h2>
+    <h2><svg class="ic"><use href="#i-check"/></svg>Confirme sua presença</h2>
     <p class="note" style="margin-top:0" id="rsvp-txt">Conta pra gente se você vem!</p>
     <label for="rsvp-name">Seu nome</label>
     <input id="rsvp-name" placeholder="Ex.: Tia Maria" autocomplete="name">
     <div id="guests"></div>
-    <button type="button" class="add" id="add-guest">➕ Adicionar acompanhante</button>
+    <button type="button" class="add" id="add-guest"><svg class="ic"><use href="#i-plus"/></svg>Adicionar acompanhante</button>
     <p class="total" id="total">Total: <b>1</b> pessoa</p>
-    <a class="btn green full" id="rsvp" target="_blank" rel="noopener">💬 Confirmar pelo WhatsApp</a>
+    <a class="btn go full" id="rsvp" target="_blank" rel="noopener"><svg class="ic"><use href="#i-wa"/></svg>Confirmar pelo WhatsApp</a>
   </section>
 </div>
 
-
 <script>
-/* ===== CONFIGURAÇÃO — edite aqui ===== */
+{
+/* ===== CONFIGURAÇÃO ===== */
 const CONFIG = {
-  whatsapp: "5585985469268",            // DDI+DDD+número, só dígitos. Ex.: "5585999998888"
-  confirmarAte: "",        // Ex.: "05/12" (deixe vazio para não mostrar)
+  whatsapp: "5585985469268",
+  confirmarAte: "",        // Ex.: "05/12" (vazio = não mostra)
   endereco: "Rua Mirian Abreu, 230 - Eusébio - CE",
-  inicio: Date.UTC(2026, 11, 12, 22, 0, 0), // 12/12/2026 19h (horário de Fortaleza, UTC-3)
+  inicio: Date.UTC(2026, 11, 12, 22, 0, 0), // 12/12/2026 19h (Fortaleza, UTC-3)
   fim:    Date.UTC(2026, 11, 13, 2, 0, 0)
 };
-
 const $ = id => document.getElementById(id);
 const enc = encodeURIComponent;
 
-/* ---- links de local e agenda ---- */
-$('gmaps').href = $('map').href = `https://www.google.com/maps/search/?api=1&query=${enc(CONFIG.endereco)}`;
+/* ---- local e agenda ---- */
+const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${enc(CONFIG.endereco)}`;
+$('gmaps').href = mapsUrl;
 $('waze').href = `https://waze.com/ul?q=${enc(CONFIG.endereco)}&navigate=yes`;
 const fmt = t => new Date(t).toISOString().replace(/[-:]/g,'').replace(/\.\d{3}/,'');
 $('gcal').href = 'https://calendar.google.com/calendar/render?action=TEMPLATE'
-  + '&text=' + enc('🐮 Aniversário de 2 anos do Joaquim')
+  + '&text=' + enc('Aniversário de 2 anos do Joaquim')
   + '&dates=' + fmt(CONFIG.inicio) + '/' + fmt(CONFIG.fim)
   + '&location=' + enc(CONFIG.endereco)
   + '&details=' + enc('Tem festa na fazendinha! Sugestão de presente: roupas 4/5 anos ou calçado 24/25.');
-if (CONFIG.confirmarAte) $('rsvp-txt').innerHTML = `Por favor, confirme até <b>${CONFIG.confirmarAte}</b> 🙏`;
+if (CONFIG.confirmarAte) $('rsvp-txt').innerHTML = `Por favor, confirme até <b>${CONFIG.confirmarAte}</b>`;
 
 /* ---- contagem regressiva ---- */
 function tick(){
-  let ms = CONFIG.inicio - Date.now();
+  const ms = CONFIG.inicio - Date.now();
   if (ms <= 0){
-    $('count').hidden = true; const m=$('count-msg'); m.hidden=false;
-    m.textContent = Date.now() < CONFIG.fim ? '🎉 É HOJE! A festa já começou!' : '💚 Obrigado por comemorar com a gente!';
+    $('count').hidden = true; const m = $('count-msg'); m.hidden = false;
+    m.textContent = Date.now() < CONFIG.fim ? 'É hoje! A festa já começou!' : 'Obrigado por comemorar com a gente!';
     return;
   }
   const s = Math.floor(ms/1000), p = n => String(n).padStart(2,'0');
@@ -534,7 +709,7 @@ function tick(){
 }
 tick(); setInterval(tick, 1000);
 
-/* ---- toast ---- */
+/* ---- aviso ---- */
 let toastT;
 function toast(msg){ const t=$('toast'); t.textContent=msg; t.classList.add('show'); clearTimeout(toastT); toastT=setTimeout(()=>t.classList.remove('show'),2600); }
 
@@ -545,28 +720,26 @@ function updateTotal(){
   $('total').innerHTML = `Total: <b>${n}</b> ${n === 1 ? 'pessoa' : 'pessoas'}`;
   guestsEl.querySelectorAll('label').forEach((l,i) => l.textContent = `Acompanhante ${i+1}`);
 }
-$('add-guest').onclick = () => {
-  if (guestsEl.children.length >= 15) return;
-  const w = document.createElement('div');
-  w.innerHTML = '<label></label><div class="guest"><input placeholder="Nome do acompanhante"><button type="button" class="rm" aria-label="Remover">✕</button></div>';
-  w.querySelector('.rm').onclick = () => { w.remove(); updateTotal(); };
-  guestsEl.appendChild(w); updateTotal(); w.querySelector('input').focus();
-};
 function rsvpCheck(){
   const nome = $('rsvp-name').value.trim();
   const inputs = [...guestsEl.querySelectorAll('input')];
-  if (!nome) return {err:'Escreve seu nome primeiro 😉', el:$('rsvp-name')};
+  if (!nome) return {err:'Escreve seu nome primeiro', el:$('rsvp-name')};
   const vazio = inputs.find(i => !i.value.trim());
-  if (vazio) return {err:'Preenche o nome do acompanhante (ou remove com ✕)', el:vazio};
+  if (vazio) return {err:'Preenche o nome do acompanhante (ou remove no X)', el:vazio};
   const outros = inputs.map(i => i.value.trim());
   let msg = `Oi! 🐮 Aqui é ${nome}. Confirmo presença no aniversário de 2 aninhos do Joaquim! 🎉`;
   if (outros.length) msg += `\n\nVamos ${outros.length + 1} pessoas:\n` + [nome, ...outros].map(n => `• ${n}`).join('\n');
   return {url:`https://wa.me/${CONFIG.whatsapp}?text=${enc(msg)}`};
 }
 function rsvpSync(){ const r = rsvpCheck(); $('rsvp').href = r.url || '#'; }
+$('add-guest').onclick = () => {
+  if (guestsEl.children.length >= 15) return;
+  const w = document.createElement('div');
+  w.innerHTML = '<label></label><div class="guest"><input placeholder="Nome do acompanhante"><button type="button" class="rm" aria-label="Remover"><svg class="ic"><use href="#i-x"/></svg></button></div>';
+  w.querySelector('.rm').onclick = () => { w.remove(); updateTotal(); rsvpSync(); };
+  guestsEl.appendChild(w); updateTotal(); rsvpSync(); w.querySelector('input').focus();
+};
 $('sheet').addEventListener('input', rsvpSync);
-$('add-guest').addEventListener('click', rsvpSync);
-guestsEl.addEventListener('click', () => setTimeout(rsvpSync));
 $('rsvp').onclick = e => {
   const r = rsvpCheck();
   if (r.err){ e.preventDefault(); toast(r.err); r.el.focus(); return; }
@@ -574,11 +747,12 @@ $('rsvp').onclick = e => {
 };
 rsvpSync();
 
-/* ===== ÁUDIO (gerado no navegador, sem arquivos) ===== */
+/* ===== ÁUDIO (gerado no navegador) ===== */
 let ctx, master, musicGain, musicOn = false, musicTimer;
 function audio(){
   if (!ctx){
-    ctx = new (window.AudioContext || window.webkitAudioContext)();
+    const AC = window.AudioContext || window.webkitAudioContext; if (!AC) return null;
+    ctx = new AC();
     master = ctx.createGain(); master.gain.value = .9; master.connect(ctx.destination);
     musicGain = ctx.createGain(); musicGain.gain.value = .5; musicGain.connect(master);
   }
@@ -586,45 +760,53 @@ function audio(){
   return ctx;
 }
 function env(g, t, a, peak, d){ g.gain.setValueAtTime(0.0001,t); g.gain.exponentialRampToValueAtTime(peak,t+a); g.gain.exponentialRampToValueAtTime(0.0001,t+a+d); }
-
 const sounds = {
-  vaca(){ const c=audio(), t=c.currentTime;
+  vaca(){ const c=audio(); if(!c) return; const t=c.currentTime;
     const o=c.createOscillator(), f=c.createBiquadFilter(), g=c.createGain(), l=c.createOscillator(), lg=c.createGain();
     o.type='sawtooth'; o.frequency.setValueAtTime(95,t); o.frequency.linearRampToValueAtTime(140,t+.35); o.frequency.linearRampToValueAtTime(105,t+1.2);
     l.frequency.value=5; lg.gain.value=4; l.connect(lg).connect(o.frequency);
     f.type='lowpass'; f.frequency.setValueAtTime(350,t); f.frequency.linearRampToValueAtTime(900,t+.4); f.frequency.linearRampToValueAtTime(400,t+1.2);
     g.gain.setValueAtTime(0.0001,t); g.gain.exponentialRampToValueAtTime(.5,t+.15); g.gain.setValueAtTime(.5,t+.9); g.gain.exponentialRampToValueAtTime(0.0001,t+1.3);
     o.connect(f).connect(g).connect(master); o.start(t); l.start(t); o.stop(t+1.35); l.stop(t+1.35); },
-  cavalo(){ const c=audio(), t=c.currentTime;
+  cavalo(){ const c=audio(); if(!c) return; const t=c.currentTime;
     const o=c.createOscillator(), f=c.createBiquadFilter(), g=c.createGain(), l=c.createOscillator(), lg=c.createGain();
     o.type='sawtooth'; o.frequency.setValueAtTime(500,t); o.frequency.linearRampToValueAtTime(950,t+.2); o.frequency.exponentialRampToValueAtTime(380,t+1.1);
     l.frequency.setValueAtTime(14,t); l.frequency.linearRampToValueAtTime(22,t+1); lg.gain.value=70; l.connect(lg).connect(o.frequency);
     f.type='bandpass'; f.frequency.value=1100; f.Q.value=1.2;
     g.gain.setValueAtTime(0.0001,t); g.gain.exponentialRampToValueAtTime(.45,t+.06); g.gain.exponentialRampToValueAtTime(0.0001,t+1.15);
     o.connect(f).connect(g).connect(master); o.start(t); l.start(t); o.stop(t+1.2); l.stop(t+1.2); },
-  pato(){ const c=audio();
+  pato(){ const c=audio(); if(!c) return;
     [0,.22].forEach(d=>{ const t=c.currentTime+d, o=c.createOscillator(), f=c.createBiquadFilter(), g=c.createGain();
       o.type='sawtooth'; o.frequency.setValueAtTime(330,t); o.frequency.linearRampToValueAtTime(240,t+.14);
       f.type='bandpass'; f.frequency.value=1300; f.Q.value=4;
       env(g,t,.01,.9,.15); o.connect(f).connect(g).connect(master); o.start(t); o.stop(t+.2); }); },
-  porco(){ const c=audio();
+  porco(){ const c=audio(); if(!c) return;
     [0,.26].forEach(d=>{ const t=c.currentTime+d, o=c.createOscillator(), f=c.createBiquadFilter(), g=c.createGain(), l=c.createOscillator(), lg=c.createGain();
       o.type='sawtooth'; o.frequency.setValueAtTime(210,t); o.frequency.linearRampToValueAtTime(150,t+.16);
       l.type='square'; l.frequency.value=38; lg.gain.value=40; l.connect(lg).connect(o.frequency);
       f.type='lowpass'; f.frequency.value=1000; env(g,t,.01,.6,.17);
-      o.connect(f).connect(g).connect(master); o.start(t); l.start(t); o.stop(t+.22); l.stop(t+.22); }); }
+      o.connect(f).connect(g).connect(master); o.start(t); l.start(t); o.stop(t+.22); l.stop(t+.22); }); },
+  porta(){ const c=audio(); if(!c) return; const t=c.currentTime;
+    const o=c.createOscillator(), f=c.createBiquadFilter(), g=c.createGain(), l=c.createOscillator(), lg=c.createGain();
+    o.type='sawtooth'; o.frequency.setValueAtTime(70,t); o.frequency.linearRampToValueAtTime(120,t+.9);
+    l.frequency.value=23; lg.gain.value=30; l.connect(lg).connect(o.frequency);
+    f.type='bandpass'; f.frequency.value=900; f.Q.value=6; env(g,t,.08,.12,.9);
+    o.connect(f).connect(g).connect(master); o.start(t); l.start(t); o.stop(t+1.1); l.stop(t+1.1); },
+  plim(){ const c=audio(); if(!c) return;
+    [784,988,1175,1568].forEach((fq,i)=>{ const t=c.currentTime+i*.09, o=c.createOscillator(), g=c.createGain();
+      o.type='triangle'; o.frequency.value=fq; env(g,t,.01,.12,.6); o.connect(g).connect(master); o.start(t); o.stop(t+.7); }); }
 };
-
 document.querySelectorAll('.animal').forEach(el => {
   el.addEventListener('click', () => {
     sounds[el.dataset.a]();
     el.classList.remove('hop','talk'); void el.offsetWidth; el.classList.add('hop','talk');
     clearTimeout(el._t); el._t = setTimeout(()=>el.classList.remove('talk','hop'), 1500);
+    setTimeout(() => openSheet(el.dataset.open), 650);
   });
 });
 
-/* ---- musiquinha: "Seu Lobato tinha um sítio" (domínio público), estilo caixinha de música ---- */
-const NOTE = {D4:293.66,E4:329.63,G4:392,A4:440,B4:493.88,D5:587.33,G5:783.99};
+/* ---- musiquinha: "Seu Lobato tinha um sítio" (domínio público), caixinha de música ---- */
+const NOTE = {D4:293.66,E4:329.63,G4:392,A4:440,B4:493.88};
 const SONG = [
   ['G4',1],['G4',1],['G4',1],['D4',1],['E4',1],['E4',1],['D4',2],
   ['B4',1],['B4',1],['A4',1],['A4',1],['G4',3],[0,1],
@@ -633,62 +815,61 @@ const SONG = [
 ];
 const BEAT = .34;
 function pluck(freq, t, dur){
-  [[1,'triangle',.22],[2,'sine',.06]].forEach(([m,type,vol])=>{
+  [[1,'triangle',.2],[2,'sine',.05],[3,'sine',.02]].forEach(([m,type,vol])=>{
     const o=ctx.createOscillator(), g=ctx.createGain(); o.type=type; o.frequency.value=freq*m;
-    env(g,t,.008,vol,Math.max(.35,dur)); o.connect(g).connect(musicGain); o.start(t); o.stop(t+dur+.5);
+    env(g,t,.008,vol,Math.max(.4,dur)); o.connect(g).connect(musicGain); o.start(t); o.stop(t+dur+.6);
   });
 }
 function playLoop(){
-  if (!musicOn) return;
-  let t = ctx.currentTime + .08, total = 0;
-  SONG.forEach(([n,b])=>{ if(n) pluck(NOTE[n]*1.0, t+total*BEAT, b*BEAT); total += b; });
+  if (!musicOn || !ctx) return;
+  const t = ctx.currentTime + .08; let total = 0;
+  SONG.forEach(([n,b])=>{ if(n) pluck(NOTE[n], t+total*BEAT, b*BEAT); total += b; });
   musicTimer = setTimeout(playLoop, total*BEAT*1000);
 }
 function setMusic(on){
-  musicOn = on; $('sound').textContent = on ? '🔊' : '🔇';
+  musicOn = on;
+  $('sound').innerHTML = `<svg class="ic"><use href="#i-${on ? 'sound' : 'mute'}"/></svg>`;
   clearTimeout(musicTimer);
-  if (on){ audio(); playLoop(); }
+  if (on && audio()) playLoop();
 }
 $('sound').onclick = () => setMusic(!musicOn);
 document.addEventListener('visibilitychange', () => { if (!ctx) return; document.hidden ? ctx.suspend() : ctx.resume(); });
 
-/* ===== ABRIR A PORTEIRA ===== */
+/* ===== ABRIR O CELEIRO ===== */
 function openGate(){
   const g = $('gate'); if (g.classList.contains('open')) return;
-  audio(); g.classList.add('open','gone');
+  audio(); sounds.porta();
+  g.classList.add('open','gone');
   document.body.classList.remove('locked');
   $('sound').classList.add('show');
-  setTimeout(()=>{ setMusic(true); sounds.vaca(); }, 700);
-  const items = ['🌼','🌾','⭐','🌻','💚','🐾'];
-  for (let i=0;i<34;i++){
-    const s=document.createElement('span'); s.className='confetti'; s.textContent=items[i%items.length];
-    s.style.left=Math.random()*100+'vw'; s.style.animationDuration=(2.4+Math.random()*2)+'s'; s.style.animationDelay=(.4+Math.random()*1.2)+'s';
-    document.body.appendChild(s); setTimeout(()=>s.remove(), 5500);
+  setTimeout(() => $('scene').classList.add('in'), 1700);
+  setTimeout(() => { sounds.plim(); }, 1500);
+  setTimeout(() => { setMusic(true); }, 2400);
+  const cores = ['#F4D987','#FBF6EA','#B9D29C','#F6B8B8','#8DB6D9','#E8A87C'];
+  for (let i=0;i<36;i++){
+    const s = document.createElement('span'); s.className = 'petal';
+    const w = 8 + Math.random()*8;
+    s.style.cssText = `left:${Math.random()*100}vw;width:${w}px;height:${w*1.5}px;background:${cores[i%cores.length]};border-radius:${i%2?'50% 0 50% 0':'50%'};animation-duration:${2.6+Math.random()*2.2}s;animation-delay:${1.6+Math.random()*1.2}s`;
+    document.body.appendChild(s); setTimeout(() => s.remove(), 6500);
   }
-  setTimeout(()=>{ g.remove(); }, 1600);
+  setTimeout(() => g.remove(), 2400);
 }
 $('gate').addEventListener('click', openGate);
-$('gate').addEventListener('keydown', e => { if (e.key==='Enter'||e.key===' ') openGate(); });
+$('gate').addEventListener('keydown', e => { if (e.key==='Enter'||e.key===' '){ e.preventDefault(); openGate(); } });
 
 /* ---- janela de detalhes ---- */
 function pop(){ if(!ctx) return; const t=ctx.currentTime,o=ctx.createOscillator(),g=ctx.createGain();
-  o.type='sine'; o.frequency.setValueAtTime(520,t); o.frequency.exponentialRampToValueAtTime(880,t+.08); env(g,t,.005,.18,.1); o.connect(g).connect(master); o.start(t); o.stop(t+.15); }
+  o.type='sine'; o.frequency.setValueAtTime(520,t); o.frequency.exponentialRampToValueAtTime(880,t+.08); env(g,t,.005,.16,.1); o.connect(g).connect(master); o.start(t); o.stop(t+.15); }
 function openSheet(name){
   document.querySelectorAll('.sheet section').forEach(sc => sc.classList.toggle('on', sc.dataset.s === name));
+  if (name === 'onde' && !$('map').getAttribute('src')) $('map').src = `https://maps.google.com/maps?q=${enc(CONFIG.endereco)}&z=16&output=embed`;
   $('sheet').scrollTop = 0; $('sheet').classList.add('on'); $('sheet-bg').classList.add('on'); pop();
 }
 function closeSheet(){ $('sheet').classList.remove('on'); $('sheet-bg').classList.remove('on'); }
-document.querySelectorAll('[data-open]').forEach(b => b.addEventListener('click', () => {
-  if (b.classList.contains('animal')) setTimeout(() => openSheet(b.dataset.open), 650);
-  else if (b.classList.contains('door')) { b.classList.add('open'); setTimeout(() => openSheet(b.dataset.open), 550); }
-  else openSheet(b.dataset.open);
-}));
 $('close').onclick = closeSheet; $('sheet-bg').onclick = closeSheet;
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeSheet(); });
-
-/* ---- cartões aparecendo ao rolar ---- */
-const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }), {threshold:.15});
-document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+window.openSheet = openSheet;
+}
 </script>
 </body>
 </html>
